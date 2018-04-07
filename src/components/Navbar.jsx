@@ -1,24 +1,24 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import github from '../img/github-icon.svg';
+import logo from '../img/logo.svg';
 
 const Navbar = () => (
   <nav className="navbar is-transparent">
     <div className="container">
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
+        <Link to="/" href="/" className="navbar-item">
           <figure className="image">
             <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
           </figure>
         </Link>
       </div>
       <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
+        <Link className="navbar-item" href="/about" to="/about">
           About
         </Link>
-        <Link className="navbar-item" to="/products">
+        <Link className="navbar-item" href="/products" to="/products">
           Products
         </Link>
       </div>
@@ -36,6 +36,6 @@ const Navbar = () => (
       </div>
     </div>
   </nav>
-)
+);
 
-export default Navbar
+export default Navbar;
