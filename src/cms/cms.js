@@ -1,4 +1,4 @@
-import CMS from 'netlify-cms';
+import CMS from 'netlify-cms'; // eslint-disable-line import/no-extraneous-dependencies
 
 import AboutPagePreview from './preview-templates/AboutPagePreview';
 import BlogPostPreview from './preview-templates/BlogPostPreview';
