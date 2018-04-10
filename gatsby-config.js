@@ -1,9 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'AW3D - Sua melhor impressão',
   },
   plugins: [
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-116448182-1',
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -33,4 +41,4 @@ module.exports = {
       },
     },
   ],
-}
+};
