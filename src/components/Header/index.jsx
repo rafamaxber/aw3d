@@ -142,14 +142,14 @@ const Btn = styled.a`
 `;
 
 const Component = ({ isHomepage }) => {
-  const $nav = document.querySelector('[data-js="nav"]');
+  const $nav = () => 'teste';
 
   const showMobileMenu = () => {
-    $nav.classList.toggle('active');
+    return 'oi';
   };
 
   const clearMenu = () => {
-    $nav.classList.remove('active');
+    return 'oi';
   };
 
   return (

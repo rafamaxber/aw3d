@@ -31,7 +31,7 @@ const IndexPageTemplate = ({
 );
 
 const IndexPage = ({ data }) => {
-  console.log(data.allMarkdownRemark.edges[0].node.frontmatter);
+  // console.log(data.allMarkdownRemark.edges[0].node.frontmatter);
 
   return <IndexPageTemplate />;
 };
