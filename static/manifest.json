@@ -1,5 +1,5 @@
 {
-  "name": "AW3D Impressão 3D",
+  "name": "AW3D - Sua melhor impressão",
   "short_name": "AW3D",
   "theme_color": "#f8d322",
   "background_color": "#ffffff",
@@ -10,42 +10,42 @@
   "start_url": "/?utm_source=homescreen",
   "icons": [
     {
-      "src": "images/favicons/icon-72x72.png",
+      "src": "img/favicons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-96x96.png",
+      "src": "img/favicons/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-128x128.png",
+      "src": "img/favicons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-144x144.png",
+      "src": "img/favicons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-152x152.png",
+      "src": "img/favicons/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-192x192.png",
+      "src": "img/favicons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-384x384.png",
+      "src": "img/favicons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "images/favicons/icon-512x512.png",
+      "src": "img/favicons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
