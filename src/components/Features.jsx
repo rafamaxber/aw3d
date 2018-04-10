@@ -16,18 +16,11 @@ const FeatureGrid = ({ gridItems }) => (
   </div>
 );
 
-FeatureGrid.defaultProps = {
-  gridItems: PropTypes.arrayOf(PropTypes.shape({
-    image: PropTypes.string,
-    text: PropTypes.string,
-  })),
-};
-
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(PropTypes.shape({
     image: PropTypes.string,
     text: PropTypes.string,
-  })),
+  })).isRequired,
 };
 
 export default FeatureGrid;

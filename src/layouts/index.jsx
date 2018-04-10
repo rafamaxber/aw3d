@@ -35,7 +35,7 @@ injectGlobal`
     "Helvetica Neue",
     sans-serif;
     background-color: #fbfbfb;
-    color: #545454;
+    color: #3a3a3a;
     font-size: 62.5%;
     @media (max-width: 768px) {
       font-size: 50%;
@@ -46,7 +46,7 @@ injectGlobal`
   }
 `;
 
-const TemplateWrapper = ({ children, location }) => (
+const TemplateWrapper = ({ children, location = {} }) => (
   <main className="main">
     <Helmet>
       <title>AW3D - A sua melhor impressão</title>

@@ -1,42 +1,56 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Container } from '../Shared';
+import Slider from 'react-slick';
+import { injectGlobal } from 'styled-components';
+import PropTypes from 'prop-types';
 
-import gtMax3d from '../../img/GTMax3D.jpg';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const Banner = styled.section`
-  width: 100%;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-image: url(${gtMax3d});
-  position: relative;
-  background-attachment: fixed;
-  background-color: #070707;
-  background-position: 0 -20%;
-  background-size: 100%;
+// eslint-disable-next-line no-unused-expressions
+injectGlobal`
+  .bannerSlider {
+    .slick-next,
+    .slick-prev {
+      z-index: 1;
+    }
+    .slick-prev {
+      left: 2%;
+    }
+    .slick-next {
+      right: 2%;
+    }
+  }
 `;
 
-const BannerContainer = styled(Container)`
-  position: relative;
-`;
+const Component = ({ images }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
 
-const BannerContainerText = styled.div`
-  position: absolute;
-  color: #fff;
-  z-index: 1;
-  top: 0;
-  margin: auto;
-  bottom: 0;
-  width: 100%;
-  height: 300px;
-`;
+  return (
+    <Slider {...settings} className="bannerSlider">
+      {
+        images.map(item => (
+          <div className="bannerImage" key={item.id}>
+            <img src={item.src} alt={item.alt} />
+          </div>
+        ))
+      }
+    </Slider>
+  );
+};
 
-const Component = () => (
-  <Banner>
-    <BannerContainerText>
-      <BannerContainer />
-    </BannerContainerText>
-  </Banner>
-);
+Component.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+  })).isRequired,
+};
 
 export default Component;

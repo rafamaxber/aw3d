@@ -1,15 +1,15 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const Container = styled.div `
+export const Container = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: auto;
   position: relative;
   padding: 0 20px;
-`
+`;
 
 export const Main = styled.div`
-  padding: 55px 0;
+  padding: 50px 0;
   z-index: 0;
   position: relative;
 `;
@@ -21,6 +21,5 @@ export const Title = styled.div`
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     font-size: 2.5em;
-    text-transform: uppercase;
   }
-`
+`;
