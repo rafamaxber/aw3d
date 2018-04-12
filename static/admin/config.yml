@@ -29,7 +29,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Welcome Title", name: "welcomeTitle", widget: "string"}
-          - {label: "Welcome Text", name: "welcomeHtml", widget: "markdown"}
+          - {label: "Welcome Text", name: "body", widget: "markdown"}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
