@@ -5,7 +5,7 @@
   "author": "Rafael Bernardo",
   "dependencies": {
     "eslint": "^4.19.1",
-    "gatsby": "^1.9.213",
+    "gatsby": "^1.9.248",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-google-analytics": "^1.0.28",
     "gatsby-plugin-netlify-cms": "^1.0.9",

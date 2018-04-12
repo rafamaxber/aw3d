@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Banner from "../components/Banner";
-import Welcome from "../components/Welcome";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Banner from '../components/Banner';
+import Welcome from '../components/Welcome';
 
 const IndexPageTemplate = ({ banners, welcomeTitle, welcomeHtml }) => (
   <div className="homePage">

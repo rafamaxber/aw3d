@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IndexPageTemplate } from '../../pages/index';
+import { IndexPageTemplate } from '../../templates/index-page';
 
 const IndexPagePreview = ({ entry, widgetFor }) => {
   const entryBanners = entry.getIn(['data', 'banners']);
@@ -13,13 +13,6 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
       welcomeHtml={widgetFor('welcomeHtml')}
     />
   );
-};
-
-IndexPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
 };
 
 export default IndexPagePreview;
