@@ -1,35 +1,56 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Banner from '../components/Banner';
-import Welcome from '../components/Welcome';
+import React from "react";
+import PropTypes from "prop-types";
+import Banner from "../components/Banner";
+import Welcome from "../components/Welcome";
 
-const bannerImages = [
-  {
-    src: 'https://placehold.it/1600x500?text=banner%201',
-    alt: '',
-    id: 0,
-  },
-  {
-    src: 'https://placehold.it/1600x500?text=banner%202',
-    alt: '',
-    id: 1,
-  },
-  {
-    src: 'https://placehold.it/1600x500?text=banner%203',
-    alt: '',
-    id: 2,
-  },
-];
-
-const IndexPageTemplate = ({
- image, title, heading, description 
-}) => (
+const IndexPageTemplate = ({ banners, welcomeTitle, welcomeHtml }) => (
   <div className="homePage">
-    <Banner images={bannerImages} />
-    <Welcome />
+    <Banner images={banners} />
+    <Welcome welcomeTitle={welcomeTitle} welcomeHtml={welcomeHtml} />
   </div>
 );
 
-const IndexPage = ({ data }) => <IndexPageTemplate />;
+const IndexPage = ({ data }) => {
+  const {
+    banners,
+    welcomeTitle,
+  } = data.allMarkdownRemark.edges[0].node.frontmatter;
+  const { html } = data.allMarkdownRemark.edges[0].node;
+
+  return (
+    <IndexPageTemplate
+      banners={banners}
+      welcomeTitle={welcomeTitle}
+      welcomeHtml={html}
+    />
+  );
+};
 
 export default IndexPage;
+
+export const indexPageQuery = graphql`
+  query IndexPage {
+    allMarkdownRemark(filter: { fields: { slug: { regex: "/index/" } } }) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            image
+            welcomeTitle
+            banners {
+              id
+              src
+              alt
+            }
+            description
+            testimonials {
+              author
+              quote
+            }
+          }
+        }
+      }
+    }
+  }
+`;
