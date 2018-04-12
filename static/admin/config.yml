@@ -49,5 +49,6 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Banners, name: banners, widget: list, fields: [{label: Banner, name: banner, widget: image}, {label: alt, name: alt, widget: string}]}
           - {label: "Welcome Title", name: welcomeTitle, widget: string}
           - {label: "Welcome Text", name: body, widget: markdown}

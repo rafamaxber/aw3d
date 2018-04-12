@@ -15,4 +15,12 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
   );
 };
 
+IndexPagePreview.propTypes = {
+  entry: PropTypes.shape({
+    getIn: PropTypes.func,
+  }),
+  widgetFor: PropTypes.func,
+};
+
+
 export default IndexPagePreview;
