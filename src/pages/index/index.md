@@ -38,7 +38,6 @@ testimonials:
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
 ---
-
 É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele.
 
 No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia.
