@@ -4,13 +4,10 @@ import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
 import Content, { HTMLContent } from '../components/Content';
 
-const IndexPageTemplate = ({ welcomeTitle, welcomeHtml, contentComponent }) => {
-  const PageContent = contentComponent || Content;
+const IndexPageTemplate = ({ welcomeTitle }) => {
   return (
     <div className="homePage">
-      <Welcome welcomeTitle={welcomeTitle}>
-        <PageContent className="content" content={welcomeHtml} />
-      </Welcome>
+      <Welcome welcomeTitle={welcomeTitle} />
     </div>
   );
 };
@@ -23,9 +20,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <IndexPageTemplate
-      contentComponent={HTMLContent}
       welcomeTitle={welcomeTitle}
-      welcomeHtml={html}
     />
   );
 };
