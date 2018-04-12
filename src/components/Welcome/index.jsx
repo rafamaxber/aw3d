@@ -17,12 +17,12 @@ const Text = styled.section`
   }
 `;
 
-const Component = ({ welcomeTitle, welcomeHtml }) => (
+const Component = ({ welcomeTitle, children }) => (
   <Welcome>
     <Title>
       <h2>{welcomeTitle}</h2>
     </Title>
-    <Text dangerouslySetInnerHTML={{ __html: welcomeHtml }} />
+    <Text>{children}</Text>
   </Welcome>
 );
 

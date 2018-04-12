@@ -2,24 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
+import Content, { HTMLContent } from '../components/Content';
 
-const IndexPageTemplate = ({ banners, welcomeTitle, welcomeHtml }) => (
-  <div className="homePage">
-    <Banner images={banners} />
-    <Welcome welcomeTitle={welcomeTitle} welcomeHtml={welcomeHtml} />
-  </div>
-);
+const IndexPageTemplate = ({ welcomeTitle, welcomeHtml, contentComponent }) => {
+  const PageContent = contentComponent || Content;
+  return (
+    <div className="homePage">
+      <Welcome welcomeTitle={welcomeTitle}>
+        <PageContent className="content" content={welcomeHtml} />
+      </Welcome>
+    </div>
+  );
+};
 
 const IndexPage = ({ data }) => {
   const {
-    banners,
     welcomeTitle,
   } = data.allMarkdownRemark.edges[0].node.frontmatter;
   const { html } = data.allMarkdownRemark.edges[0].node;
 
   return (
     <IndexPageTemplate
-      banners={banners}
+      contentComponent={HTMLContent}
       welcomeTitle={welcomeTitle}
       welcomeHtml={html}
     />
@@ -35,19 +39,7 @@ export const indexPageQuery = graphql`
         node {
           html
           frontmatter {
-            title
-            image
             welcomeTitle
-            banners {
-              id
-              src
-              alt
-            }
-            description
-            testimonials {
-              author
-              quote
-            }
           }
         }
       }

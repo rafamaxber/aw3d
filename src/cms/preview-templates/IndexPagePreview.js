@@ -8,7 +8,6 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
 
   return (
     <IndexPageTemplate
-      banners={banners}
       welcomeTitle={entry.getIn(['data', 'welcomeTitle'])}
       welcomeHtml={widgetFor('body')}
     />
