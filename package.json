@@ -2,7 +2,7 @@
   "name": "aw3d-netlify-cms",
   "description": "Aw3d - Sua melhor impressão",
   "version": "0.1.0",
-  "author": "Rafael Bernardo",
+  "author": "Rafael Bernardo<rafamaxber@gmail.com>",
   "dependencies": {
     "eslint": "^4.19.1",
     "gatsby": "^1.9.248",
