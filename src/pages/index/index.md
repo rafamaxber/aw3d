@@ -4,18 +4,11 @@ path: /index
 title: Pagina principal
 image: /img/gtmatrix.jpg
 heading: AW3D
-description: >-
-  Outro texto diferente.
+description: Outro texto diferente.
 banners:
-  - src: https://placehold.it/1600x500?text=banner%201
+  - src: /img/GTMax3D.jpg
     id: 1
     alt: banner 1
-  - src: https://placehold.it/1600x500?text=banner%202
-    id: 2
-    alt: banner 2
-  - src: https://placehold.it/1600x500?text=banner%203
-    id: 2
-    alt: banner 3
 welcomeTitle: Bem vindo a AW3D
 ---
 É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele.
