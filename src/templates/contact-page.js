@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Content, { HTMLContent } from '../components/Content';
 import { Container, Title } from '../components/Shared';
 import Map from '../components/Map';
+import FormContact from '../components/FormContact';
 
 const Wrapper = styled.div`
 `;
@@ -16,6 +17,9 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
       <Title>
         <h1>{title}</h1>
       </Title>
+      <Container>
+        <FormContact />
+      </Container>
       <Map />
     </Wrapper>
   );

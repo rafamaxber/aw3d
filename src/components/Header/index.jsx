@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Container } from '../Shared';
+import { Container, Btn } from '../Shared';
 import LogoComponent from '../Logo';
 
 const menuLinks = [
@@ -126,18 +126,7 @@ const HamburguerMenu = styled.div`
   }
 `;
 
-const Btn = styled.a`
-  background: #f8d322;
-  border: none;
-  border-radius: 4px;
-  color: #000;
-  display: inline-block;
-  white-space: nowrap;
-  padding: 8px 18px;
-  text-decoration: none;
-  position: relative;
-  border-bottom: none;
-  font-size: 1.6em;
+const HeaderBtn = styled(Btn)`
   margin: 0 5px;
 `;
 
@@ -170,7 +159,7 @@ const Component = ({ isHomepage }) => {
             ))}
           </Menu>
         </Nav>
-        <Btn href="https://www.aw3dshop.com.br/?utm_source=site_institucional">Loja</Btn>
+        <HeaderBtn href="https://www.aw3dshop.com.br/?utm_source=site_institucional">Loja</HeaderBtn>
       </WrapperNavigation>
     </Header>
   );

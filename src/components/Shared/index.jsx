@@ -23,3 +23,18 @@ export const Title = styled.div`
     font-size: 2.5em;
   }
 `;
+
+export const Btn = styled.a`
+  background: #f8d322;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px 18px;
+  text-decoration: none;
+  position: relative;
+  border-bottom: none;
+  font-size: 1.6em;
+  cursor: pointer;
+`;
