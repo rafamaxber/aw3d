@@ -27,7 +27,7 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sobre-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"
@@ -50,4 +50,5 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Welcome Title", name: welcomeTitle, widget: string}
+          - {label: "Body", name: "body2", widget: "markdown"}
           - {label: Banners, name: banners, widget: list, fields: [{label: Image, name: src, widget: image}, {label: alt, name: alt, widget: string}, {label: id, name: id, widget: string}]}
