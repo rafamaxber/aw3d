@@ -48,7 +48,9 @@ collections:
         label: "Home page"
         name: "index"
         fields:
+          - {label: "Title", name: "title", widget: "string"}
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: "Welcome Title", name: welcomeTitle, widget: string}
-          - {label: "Body", name: "body2", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
           - {label: Banners, name: banners, widget: list, fields: [{label: Image, name: src, widget: image}, {label: alt, name: alt, widget: string}, {label: id, name: id, widget: string}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Author, name: author, widget: string}, {label: name, name: name, widget: string}, {label: quote, name: quote, widget: string}]}

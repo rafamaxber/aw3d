@@ -28,7 +28,6 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const { markdownRemark: post } = data;
   return (
     <IndexPageTemplate
