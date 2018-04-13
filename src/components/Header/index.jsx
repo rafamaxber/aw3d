@@ -9,7 +9,7 @@ const menuLinks = [
   {
     id: 1,
     label: 'Sobre a AW3D',
-    link: '/sobre',
+    link: '/quem-somos',
   },
   {
     id: 2,

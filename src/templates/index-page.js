@@ -1,41 +1,67 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Content, { HTMLContent } from '../components/Content';
 import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
-import Content, { HTMLContent } from '../components/Content';
 
-const IndexPageTemplate = ({ welcomeTitle }) => {
+export const IndexPageTemplate = ({ 
+  welcomeTitle, 
+  content, 
+  contentComponent,
+  banners,
+}) => {
+  const PageContent = contentComponent || Content;
+
   return (
     <div className="homePage">
-      <Welcome welcomeTitle={welcomeTitle} />
+      <Banner images={banners} />
+      <Welcome welcomeTitle={welcomeTitle}>
+        <PageContent content={content} />
+      </Welcome>
     </div>
   );
 };
 
-const IndexPage = ({ data }) => {
-  const {
-    welcomeTitle,
-  } = data.allMarkdownRemark.edges[0].node.frontmatter;
-  const { html } = data.allMarkdownRemark.edges[0].node;
+IndexPageTemplate.propTypes = {
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
+};
 
+const IndexPage = ({ data }) => {
+  console.log(data);
+  const { markdownRemark: post } = data;
   return (
     <IndexPageTemplate
-      welcomeTitle={welcomeTitle}
+      contentComponent={HTMLContent}
+      banners={post.frontmatter.banners}
+      welcomeTitle={post.frontmatter.welcomeTitle}
+      content={post.html}
     />
   );
 };
 
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
 export default IndexPage;
 
-export const indexPageQuery = graphql`
-  query IndexPage {
-    allMarkdownRemark(filter: { fields: { slug: { regex: "/index/" } } }) {
-      edges {
-        node {
-          html
-          frontmatter {
-            welcomeTitle
-          }
+export const IndexPageQuery = graphql`
+  query IndexPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        title
+        welcomeTitle
+        banners {
+          id
+          src
+          alt
+        },
+        testimonials {
+          author
+          name
+          quote
         }
       }
     }

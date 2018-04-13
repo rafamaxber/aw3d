@@ -30,8 +30,8 @@ export default class Map extends PureComponent {
 
   static defaultProps = {
     center: { lat: -23.541785, lng: -46.632293 },
-    zoom: 15
-  }
+    zoom: 15,
+  };
 
   render() {
     return (

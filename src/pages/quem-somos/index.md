@@ -1,7 +1,7 @@
 ---
 templateKey: 'about-page'
-path: /sobre
-title: QUEM SOMOS
+path: /quem-somos
+title: Sobre a AW3D
 image: /img/selo_150px.jpg
 ---
 **A melhor qualidade para a sua Impressão 3D**
@@ -12,5 +12,4 @@ A AW3D possui profissionais altamente qualificados junto a GTMax3D para garantir
 
 Caso não tenha o arquivo pronto modelado em 3D, envie seu projeto, desenho ou imagem para orçamento.
 
-Aguardamos o seu contato.
-
+Aguardamos o seu [contato](/contato).
