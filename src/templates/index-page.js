@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../components/Content';
 import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
+import Testimonials from '../components/Testimonials';
 
-export const IndexPageTemplate = ({ 
-  welcomeTitle, 
-  content, 
+export const IndexPageTemplate = ({
+  welcomeTitle,
+  content,
   contentComponent,
   banners,
+  testimonials,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -18,6 +20,7 @@ export const IndexPageTemplate = ({
       <Welcome welcomeTitle={welcomeTitle}>
         <PageContent content={content} />
       </Welcome>
+      <Testimonials testimonials={testimonials} />
     </div>
   );
 };
@@ -33,6 +36,7 @@ const IndexPage = ({ data }) => {
     <IndexPageTemplate
       contentComponent={HTMLContent}
       banners={post.frontmatter.banners}
+      testimonials={post.frontmatter.testimonials}
       welcomeTitle={post.frontmatter.welcomeTitle}
       content={post.html}
     />
