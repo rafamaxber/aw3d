@@ -14,7 +14,7 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
       welcomeTitle={entry.getIn(['data', 'welcomeTitle'])}
       banners={banners}
       testimonials={testimonials}
-      content={widgetFor('body2')}
+      content={widgetFor('body')}
     />
   );
 };
