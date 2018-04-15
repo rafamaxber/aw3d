@@ -4,12 +4,15 @@ import Content, { HTMLContent } from '../components/Content';
 import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
 import Testimonials from '../components/Testimonials';
+import VideoBar from "../components/VideoBar";
+import { ComponentMiniPortfolio } from '../components/Portfolio';
 
 export const IndexPageTemplate = ({
   welcomeTitle,
   content,
   contentComponent,
   banners,
+  miniPortfolio,
   testimonials,
 }) => {
   const PageContent = contentComponent || Content;
@@ -20,6 +23,8 @@ export const IndexPageTemplate = ({
       <Welcome welcomeTitle={welcomeTitle}>
         <PageContent content={content} />
       </Welcome>
+      <ComponentMiniPortfolio title={miniPortfolio.title} images={miniPortfolio.images} />
+      <VideoBar />
       <Testimonials testimonials={testimonials} />
     </div>
   );
@@ -38,6 +43,7 @@ const IndexPage = ({ data }) => {
       banners={post.frontmatter.banners}
       testimonials={post.frontmatter.testimonials}
       welcomeTitle={post.frontmatter.welcomeTitle}
+      miniPortfolio={post.frontmatter.miniPortfolio}
       content={post.html}
     />
   );
@@ -60,6 +66,15 @@ export const IndexPageQuery = graphql`
           id
           src
           alt
+        },
+        miniPortfolio {
+          title
+          images {
+            alt
+            id
+            src
+            title
+          }
         },
         testimonials {
           author

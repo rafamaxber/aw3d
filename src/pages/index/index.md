@@ -12,6 +12,21 @@ banners:
   - alt: banner 3
     id: 3
     src: 'http://unsplash.it/1600/500?random&gravity=center'
+miniPortfolio:
+  title: O que andamos fazendo
+  images:
+    - alt: Titulo imagem 1
+      id: 1
+      src: 'https://placehold.it/600x400?text=image%201'
+      title: Titulo imagem 1
+    - alt: banner 2
+      id: 2
+      src: 'https://placehold.it/600x400?text=image%202'
+      title: Titulo imagem 2
+    - alt: banner 3
+      id: 3
+      src: 'https://placehold.it/600x400?text=image%203'
+      title: Titulo imagem 3
 testimonials:
   - author: IT4D
     name: Emílio Salomão
