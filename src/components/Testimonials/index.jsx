@@ -10,6 +10,9 @@ import 'slick-carousel/slick/slick-theme.css';
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   .testimonialsSlider {
+    .slick-arrow {
+      display: none!important;
+    }
     margin-top: 30px;
     *:focus {
       outline: none;
@@ -79,7 +82,7 @@ const Testimonials = ({ wrapperTestimonials }) => {
       <Slider {...settings} className="testimonialsSlider">
         {
           wrapperTestimonials.testimonials.map(testimonial => (
-            <Article>
+            <Article key={testimonial.author}>
               <Photo>
                 <Image src={testimonial.avatar} />
               </Photo>

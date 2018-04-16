@@ -2,9 +2,10 @@ import React from 'react';
 import Link, { withPrefix } from 'gatsby-link';
 import styled from 'styled-components';
 import { Container } from '../Shared';
+import Newsletter from '../Newsletter';
 
 const Footer = styled.footer`
-  background-color: #545454;
+  background-color: #363636;
   color: #fff;
 `;
 
@@ -27,6 +28,7 @@ const Copyright = styled.div``;
 
 const Component = () => (
   <Footer>
+    <Newsletter />
     <Wrapper>
       <Column>
         <LinkCustom href="mailto:vendas@aw3d.com.br" title="Entre em contato por e-mail">
