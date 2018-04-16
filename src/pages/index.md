@@ -1,7 +1,7 @@
 ---
 title: Bem vindo a AW3D sua melhor impressão
-templateKey: index-page
 welcomeTitle: Bem vindo a AW3D
+path: /
 banners:
   - alt: banner 1
     id: 1
