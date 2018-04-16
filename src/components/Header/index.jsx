@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Container, Btn } from '../Shared';
 import LogoComponent from '../Logo';
 
-const menuLinks = [
+export const menuLinks = [
   {
     id: 1,
     label: 'Sobre a AW3D',

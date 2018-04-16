@@ -5,6 +5,7 @@ import { Container } from '../Shared';
 
 const Wrapper = styled.div`
   background-color: #363636;
+  color: #fff;
 `;
 
 const WrapperContainer = styled(Container)`
