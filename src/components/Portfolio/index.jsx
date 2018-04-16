@@ -38,15 +38,6 @@ const CardTitle = styled.div`
   font-weight: 300;
 `;
 
-const GoToLink = styled(Link)`
-  float: right;
-  margin: 20px 0;
-  font-size: 1.4em;
-  color: #6085f9;
-  text-transform: lowercase;
-  font-weight: bold;
-`;
-
 const MiniPortfolioTitle = styled.h3`
   font-size: 2.3em;
   font-weight: 700;

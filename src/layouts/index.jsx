@@ -46,6 +46,8 @@ injectGlobal`
   }
 `;
 
+const storeUrl = 'https://www.aw3dshop.com.br/?utm_source=site_institucional';
+
 const TemplateWrapper = ({ children, location }) => (
   <main className="main">
     <Helmet>
@@ -116,7 +118,7 @@ const TemplateWrapper = ({ children, location }) => (
       <meta name="theme-color" content="#f8d322" />
       <link rel="manifest" href={withPrefix('manifest.json')} />
     </Helmet>
-    <Header isHomepage={location.pathname === withPrefix('/')} />
+    <Header isHomepage={location.pathname === withPrefix('/')} storeUrl={storeUrl} />
     <Main>{children()}</Main>
     <Footer />
   </main>

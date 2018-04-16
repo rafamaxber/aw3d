@@ -130,16 +130,10 @@ const HeaderBtn = styled(Btn)`
   margin: 0 5px;
 `;
 
-const Component = ({ isHomepage }) => {
-  const $nav = () => 'teste';
-
-  const showMobileMenu = () => {
-    return 'oi';
-  };
-
-  const clearMenu = () => {
-    return 'oi';
-  };
+const Component = ({ isHomepage, storeUrl }) => {
+  const $nav = () => document.querySelector('[data-js="nav"]');
+  const showMobileMenu = () => $nav().classList.toggle('active');
+  const clearMenu = () => $nav().classList.remove('active');
 
   return (
     <Header data-js="header">
@@ -159,7 +153,7 @@ const Component = ({ isHomepage }) => {
             ))}
           </Menu>
         </Nav>
-        <HeaderBtn href="https://www.aw3dshop.com.br/?utm_source=site_institucional">Loja</HeaderBtn>
+        <HeaderBtn href={storeUrl}>Loja</HeaderBtn>
       </WrapperNavigation>
     </Header>
   );

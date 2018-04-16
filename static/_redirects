@@ -1,5 +1,0 @@
-# Rewrite a path
-/               /index              200
-
-# Redirect with a 301
-/               /index              301
