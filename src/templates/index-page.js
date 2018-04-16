@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Content, { HTMLContent } from '../components/Content';
 import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
+import VideoBar from '../components/VideoBar';
 import Testimonials from '../components/Testimonials';
-import VideoBar from "../components/VideoBar";
 import { ComponentMiniPortfolio } from '../components/Portfolio';
 
 export const IndexPageTemplate = ({
@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({
   contentComponent,
   banners,
   miniPortfolio,
-  testimonials,
+  wrapperTestimonials,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
       </Welcome>
       <ComponentMiniPortfolio title={miniPortfolio.title} images={miniPortfolio.images} />
       <VideoBar />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials wrapperTestimonials={wrapperTestimonials} />
     </div>
   );
 };
@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
     <IndexPageTemplate
       contentComponent={HTMLContent}
       banners={post.frontmatter.banners}
-      testimonials={post.frontmatter.testimonials}
+      wrapperTestimonials={post.frontmatter.wrapperTestimonials}
       welcomeTitle={post.frontmatter.welcomeTitle}
       miniPortfolio={post.frontmatter.miniPortfolio}
       content={post.html}
@@ -76,10 +76,14 @@ export const IndexPageQuery = graphql`
             title
           }
         },
-        testimonials {
-          author
-          name
-          quote
+        wrapperTestimonials {
+          title
+          testimonials {
+            author
+            name
+            quote
+            avatar
+          }
         }
       }
     }

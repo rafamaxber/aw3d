@@ -11,7 +11,6 @@ export const ProductPageTemplate = ({
   description,
   intro,
   main,
-  testimonials,
   fullImage,
   pricing,
 }) => (
@@ -139,7 +138,6 @@ const ProductPage = ({ data }) => {
       description={frontmatter.description}
       intro={frontmatter.intro}
       main={frontmatter.main}
-      testimonials={frontmatter.testimonials}
       fullImage={frontmatter.full_image}
       pricing={frontmatter.pricing}
     />
@@ -187,10 +185,6 @@ export const productPageQuery = graphql`
             alt
             image
           }
-        }
-        testimonials {
-          author
-          quote
         }
         full_image
         pricing {
