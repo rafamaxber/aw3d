@@ -7,38 +7,59 @@ import VideoBar from '../components/VideoBar';
 import Testimonials from '../components/Testimonials';
 import { ComponentMiniPortfolio } from '../components/Portfolio';
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+export const IndexPageTemplate = ({
+  welcomeTitle,
+  content,
+  contentComponent,
+  banners,
+  miniPortfolio,
+  wrapperTestimonials,
+}) => {
+  const PageContent = contentComponent || Content;
 
-    return (
-      <div className="homePage">
-        <Banner images={posts.banners} />
-        <Welcome welcomeTitle={posts.welcomeTitle}>
-          <PageContent content={posts.content} />
-        </Welcome>
-        <ComponentMiniPortfolio title={posts.miniPortfolio.title} images={posts.miniPortfolio.images} />
-        <VideoBar />
-        <Testimonials wrapperTestimonials={posts.wrapperTestimonials} />
-      </div>
-    );
-  }
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+  return (
+    <div className="homePage">
+      <Banner images={banners} />
+      <Welcome welcomeTitle={welcomeTitle}>
+        <PageContent content={content} />
+      </Welcome>
+      <ComponentMiniPortfolio title={miniPortfolio.title} images={miniPortfolio.images} />
+      <VideoBar />
+      <Testimonials wrapperTestimonials={wrapperTestimonials} />
+    </div>
+  );
 };
 
-export const pageQuery = graphql`
+IndexPageTemplate.propTypes = {
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
+};
+
+const IndexPage = ({ data }) => {
+  const post = data.allMarkdownRemark.edges[0].node;
+  return (
+    <IndexPageTemplate
+      contentComponent={HTMLContent}
+      banners={post.frontmatter.banners}
+      wrapperTestimonials={post.frontmatter.wrapperTestimonials}
+      welcomeTitle={post.frontmatter.welcomeTitle}
+      miniPortfolio={post.frontmatter.miniPortfolio}
+      content={post.html}
+    />
+  );
+};
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export default IndexPage;
+
+export const IndexPageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 1000
-      filter: { fields: {slug: {regex: "/index/" } } }
+      filter: { fields: {slug: {eq: "/"} } }
     ) {
       totalCount
       edges {
@@ -54,6 +75,15 @@ export const pageQuery = graphql`
               alt
               id
               src
+            }
+            miniPortfolio {
+              title
+              images {
+                alt
+                id
+                src
+                title
+              }
             }
             wrapperTestimonials {
               title
