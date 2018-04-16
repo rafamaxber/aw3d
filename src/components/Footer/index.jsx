@@ -59,7 +59,7 @@ const Component = () => (
       </Column>
 
       <Column>
-        {menuLinks.reverse().map(item => (
+        {[...menuLinks].reverse().map(item => (
           <ItemLink key={item.id} to={item.link}>
             {item.label}
           </ItemLink>

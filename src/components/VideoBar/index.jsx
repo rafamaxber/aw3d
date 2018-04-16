@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   clear: both;
   height: 315px;
   background-color: #363636;
+  margin: 50px 0;
 `;
 
 const ContainerVideoBar = styled(Container)`

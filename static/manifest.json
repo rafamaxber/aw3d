@@ -2,7 +2,7 @@
   "name": "AW3D - Sua melhor impressão",
   "short_name": "AW3D",
   "theme_color": "#f8d322",
-  "background_color": "#ffffff",
+  "background_color": "#f8d322",
   "display": "standalone",
   "scope": "/",
   "lang": "pt-BR",

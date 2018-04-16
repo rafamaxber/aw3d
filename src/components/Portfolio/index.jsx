@@ -73,7 +73,6 @@ export const ComponentMiniPortfolio = ({ title, images }) => (
           ))
         }
       </MiniPortfolio>
-      <GoToLink to="/portfolio">Ver mais</GoToLink>
     </Container>
   </SuccessCase>
 );
