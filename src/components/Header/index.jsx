@@ -53,6 +53,7 @@ const WrapperNavigation = styled(Container)`
   position: relative;
   justify-content: space-between;
   @media (max-width: 768px) {
+    padding: 0 0 0 0;
     justify-content: space-between;
   }
 `;
@@ -107,6 +108,14 @@ const MenuLinkItem = styled(Link)`
   }
 `;
 
+const LinkComum = MenuLinkItem.withComponent('a');
+const LinkStoreMobile = styled(LinkComum)`
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 const HamburguerMenuBar = styled.div`
   background-color: #f8d322;
   height: 2px;
@@ -121,6 +130,7 @@ const HamburguerMenuBar = styled.div`
 const HamburguerMenu = styled.div`
   display: none;
   z-index: 2;
+  padding: 0 20px;
   @media (max-width: 768px) {
     display: block;
   }
@@ -128,6 +138,9 @@ const HamburguerMenu = styled.div`
 
 const HeaderBtn = styled(Btn)`
   margin: 0 5px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Component = ({ isHomepage, storeUrl }) => {
@@ -138,19 +151,26 @@ const Component = ({ isHomepage, storeUrl }) => {
   return (
     <Header data-js="header">
       <WrapperNavigation>
+        <LogoComponent showH1={isHomepage} />
         <HamburguerMenu onClick={showMobileMenu}>
           <HamburguerMenuBar />
           <HamburguerMenuBar />
           <HamburguerMenuBar />
         </HamburguerMenu>
-        <LogoComponent showH1={isHomepage} />
         <Nav data-js="nav">
           <Menu>
-            {menuLinks.map(item => (
-              <MenuItem key={item.id}>
-                <MenuLinkItem onClick={clearMenu} to={item.link}>{item.label}</MenuLinkItem>
-              </MenuItem>
-            ))}
+            <LinkStoreMobile onClick={clearMenu} href={storeUrl}>
+              Loja
+            </LinkStoreMobile>
+            {
+              menuLinks.map(item => (
+                <MenuItem key={item.id}>
+                  <MenuLinkItem onClick={clearMenu} to={item.link}>
+                    {item.label}
+                  </MenuLinkItem>
+                </MenuItem>
+              ))
+          }
           </Menu>
         </Nav>
         <HeaderBtn href={storeUrl}>Loja</HeaderBtn>
@@ -161,6 +181,7 @@ const Component = ({ isHomepage, storeUrl }) => {
 
 Component.propTypes = {
   isHomepage: PropTypes.bool.isRequired,
+  storeUrl: PropTypes.string.isRequired,
 };
 
 export default Component;
