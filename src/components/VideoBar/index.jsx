@@ -5,14 +5,20 @@ import { Container } from '../Shared';
 
 const Wrapper = styled.div`
   clear: both;
-  height: 315px;
+  min-height: 315px;
   background-color: #363636;
-  margin: 50px 0;
+  @media (min-width: 760px) {
+    margin: 50px 0;
+  }
 `;
 
 const ContainerVideoBar = styled(Container)`
   display: flex;
+  padding: 0 0 0 0;
   justify-content: space-between;
+  @media (max-width: 880px) {
+    display: block;
+  }
 `;
 
 const WrapperText = styled.div`
@@ -20,6 +26,12 @@ const WrapperText = styled.div`
   justify-content: center;
   align-items: center;
   width: 50%;
+  @media (max-width: 880px) {
+    margin: auto;
+    width: 100%;
+    max-width: 300px;
+    padding: 60px 0 30px;
+  }
 `;
 
 const Text = styled.div`
@@ -43,6 +55,12 @@ const Iframe = styled.iframe`
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   width: 45%;
+  display: block;
+  @media (max-width: 880px) {
+    margin: auto;
+    width: 100%;
+    max-width: 560px;
+  }
 `;
 
 const VideoBar = () => (
@@ -56,7 +74,7 @@ const VideoBar = () => (
         </Text>
       </WrapperText>
       <Iframe
-        title="aw3d vide"
+        title="aw3d video"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/SHcETXwGLK0"

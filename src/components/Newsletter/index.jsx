@@ -14,16 +14,33 @@ const WrapperContainer = styled(Container)`
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
+  @media (max-width: 760px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 const Text = styled.div`
   font-size: 2.1em;
   width: 60%;
+  @media (max-width: 760px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 400px) {
+    width: 98%;
+  }
 `;
 const Form = styled.form`
   display: flex;
   justify-content: space-between;
   width: 40%;
+  @media (max-width: 760px) {
+    width: 80%;
+    max-width: 360px;
+  }
+  @media (max-width: 400px) {
+    width: 98%;
+  }
 `;
 const Input = styled.input`
   height: 40px;

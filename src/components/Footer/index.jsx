@@ -3,8 +3,8 @@ import Link, { withPrefix } from 'gatsby-link';
 import styled from 'styled-components';
 import { Container } from '../Shared';
 import Newsletter from '../Newsletter';
-import Logo from "../../img/logo_aw3d.svg";
-import Selo from "../../img/selo_150px.jpg";
+import Logo from '../../img/logo_aw3d.svg';
+import Selo from '../../img/selo_150px.jpg';
 import { menuLinks } from '../Header';
 
 const Footer = styled.footer`
@@ -18,6 +18,10 @@ const Wrapper = styled(Container)`
   align-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 `;
 
 const styleLink = `
@@ -28,11 +32,21 @@ const styleLink = `
 
 const ItemLink = styled(Link)`
   ${styleLink};
+  @media (max-width: 600px) {
+    padding: 5px 0;
+  }
 `;
 
 const Column = styled.div`
   font-size: 1.6em;
   width: 25%;
+  @media (max-width: 600px) {
+    :last-child {
+      margin-top: 0;
+    }
+    width: 100%;
+    margin: 15px 0;
+  }
 `;
 
 const LinkCustom = styled.a`
@@ -47,6 +61,10 @@ const Copyright = styled.div`
   padding: 7px;
 `;
 
+const Image = styled.img`
+  width: 100px;
+`;
+
 const date = new Date();
 const year = date.getFullYear();
 
@@ -55,7 +73,7 @@ const Component = () => (
     <Newsletter />
     <Wrapper>
       <Column>
-        <img src={Selo} />
+        <Image src={Selo} alt="AW3D GTMax3D Revenda autorizada São Paulo" />
       </Column>
 
       <Column>

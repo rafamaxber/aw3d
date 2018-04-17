@@ -11,11 +11,19 @@ const SuccessCase = styled.section`
 
 const MiniPortfolio = styled.div`
   display: flex;
+  @media (max-width: 480px) {
+    display: block;
+  }
 `;
 
 const WrapperLink = styled(Link)`
   width: 33.33%;
   display: block;
+  @media(max-width: 480px) {
+    margin: 0 auto 30px;
+    width: 100%;
+    max-width: 360px;
+  }
 `;
 
 const CardImage = styled.div`

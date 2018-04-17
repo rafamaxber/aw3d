@@ -28,7 +28,8 @@ injectGlobal`
   }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+`;
 const Article = styled.article`
   text-align: center;
 `;
@@ -71,7 +72,17 @@ const Testimonials = ({ wrapperTestimonials }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     autoplay: true,
+    responsive: [
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
