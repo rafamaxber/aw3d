@@ -61,7 +61,7 @@ const WrapperNavigation = styled(Container)`
 const Nav = styled.nav`
   width: 75%;
   &.active {
-    display: block!important;
+    display: block !important;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -100,7 +100,7 @@ const MenuItem = styled.li`
 const MenuLinkItem = styled(Link)`
   text-decoration: none;
   color: #9e9f9e;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.8em;
   transition: 0.2s ease;
   :hover {
@@ -162,15 +162,13 @@ const Component = ({ isHomepage, storeUrl }) => {
             <LinkStoreMobile onClick={clearMenu} href={storeUrl}>
               Loja
             </LinkStoreMobile>
-            {
-              menuLinks.map(item => (
-                <MenuItem key={item.id}>
-                  <MenuLinkItem onClick={clearMenu} to={item.link}>
-                    {item.label}
-                  </MenuLinkItem>
-                </MenuItem>
-              ))
-          }
+            {menuLinks.map(item => (
+              <MenuItem key={item.id}>
+                <MenuLinkItem onClick={clearMenu} to={item.link} activeStyle={{ color: '#000' }}>
+                  {item.label}
+                </MenuLinkItem>
+              </MenuItem>
+            ))}
           </Menu>
         </Nav>
         <HeaderBtn href={storeUrl}>Loja</HeaderBtn>

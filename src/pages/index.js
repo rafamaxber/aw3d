@@ -81,6 +81,7 @@ export const IndexPageQuery = graphql`
               images {
                 alt
                 id
+                url
                 src
                 title
               }

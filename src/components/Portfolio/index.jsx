@@ -61,7 +61,7 @@ export const ComponentMiniPortfolio = ({ title, images }) => (
       <MiniPortfolio>
         {
           images.map(image => (
-            <WrapperLink key={image.id} to={`/portfolio?id=${image.id}`}>
+            <WrapperLink key={image.id} to={image.url}>
               <CardImage>
                 <Image src={image.src} alt={image.alt} />
               </CardImage>

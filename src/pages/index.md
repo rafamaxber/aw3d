@@ -15,18 +15,21 @@ banners:
 miniPortfolio:
   title: O que andamos fazendo
   images:
-    - alt: Titulo imagem 1
+    - alt: Chillibeans Caveira
       id: 1
-      src: 'https://placehold.it/600x400?text=image%201'
-      title: Titulo imagem 1
-    - alt: banner 2
+      src: '/img/Chillibeans/Caveira/IMG_0971.jpg'
+      title: Chillibeans Caveira
+      url: /portfolio/chillibeans-trofeu-caveira/
+    - alt: Chillibeans Pimenta
       id: 2
-      src: 'https://placehold.it/600x400?text=image%202'
-      title: Titulo imagem 2
-    - alt: banner 3
+      src: '/img/Chillibeans/Pimenta/pimenta1.jpg'
+      title: Chillibeans Pimenta
+      url: /portfolio/chillibeans-pimenta/
+    - alt: Nossa Senhora Achiropita
       id: 3
-      src: 'https://placehold.it/600x400?text=image%203'
-      title: Titulo imagem 3
+      src: '/img/Achiropita/aw3d_achiropita8.jpg'
+      title: Nossa Senhora Achiropita
+      url: /portfolio/nossa-senhora-achiropita/
 wrapperTestimonials:
   title: Clientes Satisfeitos
   testimonials:
