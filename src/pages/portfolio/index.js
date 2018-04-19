@@ -95,6 +95,7 @@ export const portfolioPageQuery = graphql`
   query PortfolioQuery {
     allMarkdownRemark(
       filter: {fields: {slug: {regex: "/portfolio/"}} }
+      sort: {fields: "frontmatter___position"}
     ) {
       edges {
         node {

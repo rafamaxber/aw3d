@@ -1,6 +1,7 @@
 ---
 templateKey: portfolio-post
 title: Nossa Senhora Achiropita
+position: 2
 description: 
 images:
   - alt: banner 8

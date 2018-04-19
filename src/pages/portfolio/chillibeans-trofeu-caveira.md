@@ -2,6 +2,7 @@
 templateKey: portfolio-post
 title: Chillibeans Caveira
 description: 
+position: 1
 images:
   - alt: banner 1
     id: 1

@@ -2,6 +2,7 @@
 templateKey: portfolio-post
 title: Chillibeans Pimenta
 description: 
+position: 3
 images:
   - alt: banner 1
     id: 1
