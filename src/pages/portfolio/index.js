@@ -53,7 +53,6 @@ const Image = styled.img`
 `;
 
 const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => {
-  console.log(group);
   return (
     <Container>
       <Title>
@@ -62,9 +61,6 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => {
       <Wrapper>
         {group.map(({ edges }) => {
           const item = edges[0].node;
-          console.log('------');
-          console.log('==>', item);
-          console.log('------');
           let photos = item.frontmatter.images.splice(3);
           photos = item.frontmatter.images;
           return (
