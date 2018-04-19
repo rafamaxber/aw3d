@@ -20,6 +20,19 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/pages/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio-page"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Images", name: images, widget: list, fields: [{label: Image, name: src, widget: image}, {label: alt, name: alt, widget: string}, {label: id, name: id, widget: string}, {label: width, name: width, widget: string}, {label: height, name: height, widget: string}]}
+
   - name: "pages"
     label: "Pages"
     files:
@@ -28,13 +41,6 @@ collections:
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/portfolio/index.md"
-        label: "Portfolio"
-        name: "portfolio"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"

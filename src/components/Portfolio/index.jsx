@@ -89,19 +89,19 @@ export const Portfolio = () => (
         <Gallery
           photos={[
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Caveira/20180124_114859.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Caveira/20180124_114859.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Caveira/20180124_115325.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Caveira/20180124_115325.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Caveira/IMG_0971.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Caveira/IMG_0971.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Caveira/IMG_0972.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Caveira/IMG_0972.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Caveira/IMG_0980.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Caveira/IMG_0980.jpg'), width: 4, height: 3 
 },
           ]}
         />
@@ -116,49 +116,49 @@ export const Portfolio = () => (
         <Gallery
           photos={[
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita1.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita1.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita2.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita2.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita3.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita3.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita4.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita4.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita5.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita5.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita6.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita6.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita7.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita7.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita8.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita8.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita9.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita9.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita10.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita10.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita11.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita11.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita12.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita12.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita13.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita13.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita14.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita14.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Achiropita/aw3d_achiropita15.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Achiropita/aw3d_achiropita15.jpg'), width: 4, height: 3 
 },
           ]}
         />
@@ -173,25 +173,25 @@ export const Portfolio = () => (
         <Gallery
           photos={[
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/pimenta1.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/pimenta1.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/ChilliBeans3.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/ChilliBeans3.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/pimenta2.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/pimenta2.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/ChilliBeans1.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/ChilliBeans1.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/pimenta3.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/pimenta3.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/ChilliBeans2.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/ChilliBeans2.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/Chillibeans/Pimenta/ChilliBeans4.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/Chillibeans/Pimenta/ChilliBeans4.jpg'), width: 4, height: 3 
 },
           ]}
         />
@@ -206,19 +206,19 @@ export const Portfolio = () => (
         <Gallery
           photos={[
             {
- alt: 'teste', src: withPrefix('images/FormaTurismo/aw3d_forma1.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/FormaTurismo/aw3d_forma1.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/FormaTurismo/aw3d_forma2.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/FormaTurismo/aw3d_forma2.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/FormaTurismo/aw3d_forma3.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/FormaTurismo/aw3d_forma3.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/FormaTurismo/aw3d_forma4.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/FormaTurismo/aw3d_forma4.jpg'), width: 4, height: 3 
 },
             {
- alt: 'teste', src: withPrefix('images/FormaTurismo/aw3d_forma5.jpg'), width: 4, height: 3 
+ alt: 'teste', src: withPrefix('/img/FormaTurismo/aw3d_forma5.jpg'), width: 4, height: 3 
 },
           ]}
         />

@@ -39,7 +39,7 @@ export default class Component extends React.Component {
         <Gallery
           photos={this.props.photos}
           onClick={this.openLightbox}
-          columns={3}
+          columns={this.props.columns}
         />
         <Lightbox images={this.props.photos}
           onClose={this.closeLightbox}
