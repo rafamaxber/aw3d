@@ -27,7 +27,7 @@ const Gallery = styled(Link)`
   z-index: 1;
   :hover {
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -48,42 +48,43 @@ const Thumbs = styled.div`
   }
 `;
 const Image = styled.img`
-  display: block; 
+  display: block;
   width: 100%;
 `;
 
-const PortfolioPage = ({ data: { allMarkdownRemark: all } }) => {
+const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => {
+  console.log(group);
   return (
     <Container>
       <Title>
         <h1>O que andamos fazendo</h1>
       </Title>
       <Wrapper>
-        {
-          all.edges.map(({ node }) => {
-            let photos = node.frontmatter.images.splice(3);
-            photos = node.frontmatter.images;
-            return (
-              <div key={node.fields.slug}>
-                <TitlePost>
-                  <h2>
-                    {node.frontmatter.title}
-                  </h2>
-                </TitlePost>
-                <HTMLContent content={node.html} />
-                <Gallery to={node.fields.slug}>
-                  <BigImage>
-                    <Image src={photos[0].src} alt={photos[0].alt} />
-                  </BigImage>
-                  <Thumbs>
-                    <Image src={photos[1].src} alt={photos[1].alt} />
-                    <Image src={photos[2].src} alt={photos[2].alt} />
-                  </Thumbs>
-                </Gallery>
-              </div>
-            );
-          })
-        }
+        {group.map(({ edges }) => {
+          const item = edges[0].node;
+          console.log('------');
+          console.log('==>', item);
+          console.log('------');
+          let photos = item.frontmatter.images.splice(3);
+          photos = item.frontmatter.images;
+          return (
+            <div key={item.fields.slug}>
+              <TitlePost>
+                <h2>{item.frontmatter.title}</h2>
+              </TitlePost>
+              <HTMLContent content={item.html} />
+              <Gallery to={item.fields.slug}>
+                <BigImage>
+                  <Image src={photos[0].src} alt={photos[0].alt} />
+                </BigImage>
+                <Thumbs>
+                  <Image src={photos[1].src} alt={photos[1].alt} />
+                  <Image src={photos[2].src} alt={photos[2].alt} />
+                </Thumbs>
+              </Gallery>
+            </div>
+          );
+        })}
       </Wrapper>
     </Container>
   );
@@ -93,25 +94,28 @@ export default PortfolioPage;
 
 export const portfolioPageQuery = graphql`
   query PortfolioQuery {
-    allMarkdownRemark(
-      filter: {fields: {slug: {regex: "/portfolio/"}} }
-      sort: {fields: "frontmatter___position"}
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          html
-          frontmatter {
-            title
-            description
-            images {
-              id
-              alt
-              width
-              height
-              src
+    allMarkdownRemark(filter: { fields: { slug: { regex: "/portfolio/" } } }) {
+      group(field: frontmatter___position) {
+        fieldValue
+        totalCount
+        edges {
+          node {
+            id
+            fields {
+              slug
+            }
+            html
+            frontmatter {
+              position
+              title
+              description
+              images {
+                id
+                alt
+                width
+                height
+                src
+              }
             }
           }
         }
