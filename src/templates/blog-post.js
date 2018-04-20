@@ -3,7 +3,17 @@ import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
+import { Container, Title } from '../components/Shared';
 import Content, { HTMLContent } from '../components/Content';
+
+const Wrapper = styled.div``;
+const TitlePost = styled(Title)`
+  text-align: left;
+`;
+const WrapperPost = styled.div`
+  font-size: 1.6em;
+`;
 
 export const BlogPostTemplate = ({
   content,
@@ -16,32 +26,29 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <Wrapper>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: '4rem' }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={`${tag}tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+      <Container>
+        <TitlePost>
+          <h1>{title}</h1>
+        </TitlePost>
+        <WrapperPost>
+          <PostContent content={content} />
+        </WrapperPost>
+        {tags && tags.length ? (
+          <div style={{ marginTop: '4rem' }}>
+            <h4>Tags</h4>
+            <ul className="taglist">
+              {tags.map(tag => (
+                <li key={`${tag}tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </div>
-    </section>
+        ) : null}
+      </Container>
+    </Wrapper>
   );
 };
 
@@ -61,7 +68,7 @@ const BlogPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
+      helmet={<Helmet description={post.frontmatter.description} title={`${post.frontmatter.title} | Blog`} />}
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
     />
@@ -82,6 +89,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
+        full_image
         date(formatString: "MMMM DD, YYYY")
         title
         description

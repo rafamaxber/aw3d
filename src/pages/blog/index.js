@@ -1,18 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import Content, { HTMLContent } from '../../components/Content';
 import { Container, Title } from '../../components/Shared';
 
-const BlogPage = ({ data: { allMarkdownRemark: all } }) => {
-  console.log(all);
-  return (
-    <Container>
-      <Helmet title="Blog" />
-    </Container>
-  );
-};
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+const WrapperPost = styled.div`
+  width: 32%;
+  margin-bottom: 3%;
+`;
+const WrapperImage = styled.div``;
+const ImagePost = styled.img`
+  width: 100%;
+`;
+const TitlePost = styled.h2`
+  font-size: 1.8em;
+`;
+const DescriptionPost = styled.p`
+  font-size: 1.4em;
+`;
+const LinkPost = styled(Link)`
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+`;
+
+const BlogPage = ({ data: { allMarkdownRemark: all } }) => (
+  <Container>
+    <Helmet title="Blog" />
+    <Title>
+      <h1>Blog</h1>
+    </Title>
+    <Wrapper>
+      {all.edges.map(({ node }) => (
+        <WrapperPost key={node.fields.slug}>
+          <WrapperImage>
+            <Link to={node.fields.slug}>
+              <ImagePost src={node.frontmatter.full_image} alt={node.frontmatter.title} />
+            </Link>
+          </WrapperImage>
+          <TitlePost>{node.frontmatter.title}</TitlePost>
+          <DescriptionPost>
+            {node.frontmatter.description}
+            <LinkPost to={node.fields.slug}>+ Ler mais</LinkPost>
+          </DescriptionPost>
+        </WrapperPost>
+      ))}
+    </Wrapper>
+  </Container>
+);
 
 export default BlogPage;
 
@@ -27,12 +69,10 @@ export const blogPageQuery = graphql`
           fields {
             slug
           }
-          html
           frontmatter {
             title
             date
             description
-            tags
             full_image
           }
         }
