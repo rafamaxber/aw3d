@@ -9,11 +9,14 @@ import Content, { HTMLContent } from '../components/Content';
 
 const Wrapper = styled.div``;
 const ContainerPost = styled(Container)`
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     max-width: 800px;
     margin: 15px auto;
   }
-  ul, ol {
+  ul,
+  ol {
     padding: 15px;
     li {
       padding: 5px 0;
@@ -26,6 +29,7 @@ const WrapperTitlePost = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 5%;
+  background-attachment: fixed;
 `;
 const bgText = `
   padding: 10px 50px;
@@ -51,6 +55,26 @@ const DescriptionPost = styled.div`
   font-size: 1.6em;
   font-weight: normal;
 `;
+const WrapperTags = styled.div``;
+const TagsTitle = styled(Title)``;
+const Taglist = styled.ul`
+  text-align: center;
+`;
+const TaglistItem = styled.li`
+  list-style: none;
+  display: inline-block;
+  a {
+    border: 2px solid #f8d322;
+    background-color: #f8d322;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 8px 10px;
+    color: #000;
+    :hover {
+      background-color: #fff;
+    }
+  }
+`;
 
 export const BlogPostTemplate = ({
   content,
@@ -67,7 +91,7 @@ export const BlogPostTemplate = ({
   return (
     <Wrapper>
       {helmet || ''}
-      <WrapperTitlePost style={{ 'background-image': `url(${full_image})` }}>
+      <WrapperTitlePost style={{ backgroundImage: `url(${full_image})` }}>
         <TitlePost>
           <DatePost>{date}</DatePost>
           <h1>{title}</h1>
@@ -79,18 +103,21 @@ export const BlogPostTemplate = ({
           <PostContent content={content} />
         </WrapperPost>
         {tags && tags.length ? (
-          <div style={{ marginTop: '4rem' }}>
-            <h4>Tags</h4>
-            <ul className="taglist">
+          <WrapperTags style={{ marginTop: '4rem' }}>
+            <TagsTitle>
+              <h3>Tags</h3>
+            </TagsTitle>
+            <Taglist>
               {tags.map(tag => (
-                <li key={`${tag}tag`}>
+                <TaglistItem key={`${tag}tag`}>
                   <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
+                </TaglistItem>
               ))}
-            </ul>
-          </div>
+            </Taglist>
+          </WrapperTags>
         ) : null}
       </ContainerPost>
+      <script id="dsq-count-scr" src="//rafael-5.disqus.com/count.js" async />
     </Wrapper>
   );
 };
