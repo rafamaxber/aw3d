@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import Disqus from 'disqus-react';
 import { Container, Title } from '../components/Shared';
 import Content, { HTMLContent } from '../components/Content';
 
@@ -76,6 +77,13 @@ const TaglistItem = styled.li`
   }
 `;
 
+const WrapperDisqus = styled.div`
+  max-width: 830px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+`;
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -85,8 +93,17 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   full_image,
+  siteConfig,
+  slug,
 }) => {
+  console.log(siteConfig);
   const PostContent = contentComponent || Content;
+  const { disqusShortname } = siteConfig;
+  const disqusConfig = {
+    url: `${siteConfig.basePath}${slug}`,
+    identifier: 1,
+    title,
+  };
 
   return (
     <Wrapper>
@@ -117,7 +134,9 @@ export const BlogPostTemplate = ({
           </WrapperTags>
         ) : null}
       </ContainerPost>
-      <script id="dsq-count-scr" src="//rafael-5.disqus.com/count.js" async />
+      <WrapperDisqus>
+        <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      </WrapperDisqus>
     </Wrapper>
   );
 };
@@ -132,12 +151,15 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { siteMetadata: siteConfig } = data.site;
 
   return (
     <BlogPostTemplate
+      siteConfig={siteConfig}
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
+      slug={post.fields.slug}
       helmet={
         <Helmet
           description={post.frontmatter.description}
@@ -162,9 +184,20 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+        basePath
+        disqusShortname
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         full_image
         date(formatString: "MM/DD/YYYY")

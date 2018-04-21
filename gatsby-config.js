@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'AW3D - Sua melhor impressão',
+    author: 'AW3D',
+    basePath: 'https://aw3d.com.br/',
+    disqusShortname: 'rafael-5',
   },
   plugins: [
     'gatsby-plugin-styled-components',
