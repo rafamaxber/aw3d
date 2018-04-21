@@ -8,11 +8,48 @@ import { Container, Title } from '../components/Shared';
 import Content, { HTMLContent } from '../components/Content';
 
 const Wrapper = styled.div``;
+const ContainerPost = styled(Container)`
+  p, ul, ol {
+    max-width: 800px;
+    margin: 15px auto;
+  }
+  ul, ol {
+    padding: 15px;
+    li {
+      padding: 5px 0;
+    }
+  }
+`;
+const WrapperTitlePost = styled.div`
+  display: flex;
+  height: 450px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+`;
+const bgText = `
+  padding: 10px 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 25px;
+`;
 const TitlePost = styled(Title)`
-  text-align: left;
+  ${bgText};
+  h1 {
+    font-size: 4.5em;
+    margin: 15px 0 20px;
+  }
 `;
 const WrapperPost = styled.div`
+  font-size: 1.8em;
+`;
+const DatePost = styled.div`
+  font-size: 1.4em;
+  font-weight: normal;
+`;
+const DescriptionPost = styled.div`
   font-size: 1.6em;
+  font-weight: normal;
 `;
 
 export const BlogPostTemplate = ({
@@ -20,18 +57,24 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  date,
   title,
   helmet,
+  full_image,
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
     <Wrapper>
       {helmet || ''}
-      <Container>
+      <WrapperTitlePost style={{ 'background-image': `url(${full_image})` }}>
         <TitlePost>
+          <DatePost>{date}</DatePost>
           <h1>{title}</h1>
+          <DescriptionPost>{description}</DescriptionPost>
         </TitlePost>
+      </WrapperTitlePost>
+      <ContainerPost>
         <WrapperPost>
           <PostContent content={content} />
         </WrapperPost>
@@ -47,7 +90,7 @@ export const BlogPostTemplate = ({
             </ul>
           </div>
         ) : null}
-      </Container>
+      </ContainerPost>
     </Wrapper>
   );
 };
@@ -68,9 +111,16 @@ const BlogPost = ({ data }) => {
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet description={post.frontmatter.description} title={`${post.frontmatter.title} | Blog`} />}
+      helmet={
+        <Helmet
+          description={post.frontmatter.description}
+          title={`${post.frontmatter.title} | Blog`}
+        />
+      }
       tags={post.frontmatter.tags}
       title={post.frontmatter.title}
+      full_image={post.frontmatter.full_image}
+      date={post.frontmatter.date}
     />
   );
 };
@@ -90,7 +140,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         full_image
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MM/DD/YYYY")
         title
         description
         tags

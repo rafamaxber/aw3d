@@ -11,13 +11,9 @@ tags:
 
 Em 1984, o engenheiro físico norte-americano Chuck Hull, colocou seu projeto de impressora 3D em pleno funcionamento, utilizando a estereolitografia, tecnologia precursora da impressão 3D que utiliza lâmpadas para solidificar resinas.
 
-Em 1989, o co-fundador da Stratasys Ltd, S. Scott Crump, criou as primeiras versões comercias das impressoras com tecnologia FDM – deposição de material fundido – utilizando filamentos plásticos. Essa tecnologia trouxe mais velocidade, precisão
+Em 1989, o co-fundador da Stratasys Ltd, S. Scott Crump, criou as primeiras versões comercias das impressoras com tecnologia FDM – deposição de material fundido – utilizando filamentos plásticos. Essa tecnologia trouxe mais velocidade, precisão e controle da fabricação de protótipos, além da redução do custo de produção.
 
-e controle da fabricação de protótipos, além da redução do custo de produção.
-
-Atualmente, as impressoras 3D tornaram-se financeiramente acessíveis para pequenas
-
-e médias empresas, levando a prototipagem da indústria pesada para o ambiente de trabalho.
+Atualmente, as impressoras 3D tornaram-se financeiramente acessíveis para pequenas e médias empresas, levando a prototipagem da indústria pesada para o ambiente de trabalho.
 
 A tecnologia é utilizada em diversos ramos de produção:
 
