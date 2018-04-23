@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Disqus from 'disqus-react';
 import { Container, Title } from '../components/Shared';
 import Content, { HTMLContent } from '../components/Content';
+import Tag from '../components/Tag';
 
 const Wrapper = styled.div``;
 const ContainerPost = styled(Container)`
@@ -31,6 +30,10 @@ const WrapperTitlePost = styled.div`
   align-items: center;
   margin-bottom: 5%;
   background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
 `;
 const bgText = `
   padding: 10px 50px;
@@ -56,26 +59,6 @@ const DescriptionPost = styled.div`
   font-size: 1.6em;
   font-weight: normal;
 `;
-const WrapperTags = styled.div``;
-const TagsTitle = styled(Title)``;
-const Taglist = styled.ul`
-  text-align: center;
-`;
-const TaglistItem = styled.li`
-  list-style: none;
-  display: inline-block;
-  a {
-    border: 2px solid #f8d322;
-    background-color: #f8d322;
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 8px 10px;
-    color: #000;
-    :hover {
-      background-color: #fff;
-    }
-  }
-`;
 
 const WrapperDisqus = styled.div`
   max-width: 830px;
@@ -96,7 +79,6 @@ export const BlogPostTemplate = ({
   siteConfig,
   slug,
 }) => {
-  console.log(siteConfig);
   const PostContent = contentComponent || Content;
   const { disqusShortname } = siteConfig;
   const disqusConfig = {
@@ -119,20 +101,7 @@ export const BlogPostTemplate = ({
         <WrapperPost>
           <PostContent content={content} />
         </WrapperPost>
-        {tags && tags.length ? (
-          <WrapperTags style={{ marginTop: '4rem' }}>
-            <TagsTitle>
-              <h3>Tags</h3>
-            </TagsTitle>
-            <Taglist>
-              {tags.map(tag => (
-                <TaglistItem key={`${tag}tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </TaglistItem>
-              ))}
-            </Taglist>
-          </WrapperTags>
-        ) : null}
+        {tags && tags.length ? <Tag title="Tags" tags={tags} /> : null}
       </ContainerPost>
       <WrapperDisqus>
         <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />

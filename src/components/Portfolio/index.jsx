@@ -1,9 +1,8 @@
 import React from 'react';
-import Link, { withPrefix } from 'gatsby-link';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 import { Container, Title } from '../Shared';
-import Gallery from '../PortfolioLightbox';
 
 const SuccessCase = styled.section`
   margin-bottom: 40px;
@@ -46,13 +45,7 @@ const CardTitle = styled.div`
   font-weight: 300;
 `;
 
-const MiniPortfolioTitle = styled.h3`
-  font-size: 2.3em;
-  font-weight: 700;
-  margin: 20px 0;
-`;
-
-export const ComponentMiniPortfolio = ({ title, images }) => (
+const ComponentMiniPortfolio = ({ title, images }) => (
   <SuccessCase id="portfolio">
     <Title className="success-case-title">
       <h2>{ title }</h2>
@@ -75,3 +68,5 @@ export const ComponentMiniPortfolio = ({ title, images }) => (
     </Container>
   </SuccessCase>
 );
+
+export default ComponentMiniPortfolio;

@@ -14,6 +14,14 @@ const Wrapper = styled.div`
 const WrapperPost = styled.div`
   width: 32%;
   margin-bottom: 3%;
+  background-color: #fff;
+  box-shadow: 0 0 10px -3px #929292;
+  @media (max-width: 768px) {
+    width: 48%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 const WrapperImage = styled.div``;
 const ImagePost = styled.img`
@@ -30,7 +38,9 @@ const LinkPost = styled(Link)`
   margin-top: 10px;
   text-decoration: underline;
 `;
-
+const WrapperText = styled.div`
+  padding: 0 10px;
+`;
 const BlogPage = ({ data: { allMarkdownRemark: all } }) => (
   <Container>
     <Helmet title="Blog" />
@@ -45,11 +55,13 @@ const BlogPage = ({ data: { allMarkdownRemark: all } }) => (
               <ImagePost src={node.frontmatter.full_image} alt={node.frontmatter.title} />
             </Link>
           </WrapperImage>
-          <TitlePost>{node.frontmatter.title}</TitlePost>
-          <DescriptionPost>
-            {node.frontmatter.description}
-            <LinkPost to={node.fields.slug}>+ Ler mais</LinkPost>
-          </DescriptionPost>
+          <WrapperText>
+            <TitlePost>{node.frontmatter.title}</TitlePost>
+            <DescriptionPost>
+              {node.frontmatter.description}
+              <LinkPost to={node.fields.slug}>+ Ler mais</LinkPost>
+            </DescriptionPost>
+          </WrapperText>
         </WrapperPost>
       ))}
     </Wrapper>

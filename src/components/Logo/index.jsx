@@ -15,7 +15,7 @@ const styleLogo = `
     display: block;
   }
   @media (max-width: 768px) {
-   height: 50px; 
+   height: 49px;
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { Container, Btn } from '../Shared';
 import LogoComponent from '../Logo';
@@ -44,6 +44,7 @@ const Header = styled.header`
   align-items: center;
   @media (max-width: 768px) {
     height: 50px;
+    background-color: #f8d322;
   }
 `;
 
@@ -106,6 +107,9 @@ const MenuLinkItem = styled(Link)`
   :hover {
     color: #545454;
   }
+  @media (max-width: 768px) {
+    font-size: 2.5em;
+  }
 `;
 
 const LinkComum = MenuLinkItem.withComponent('a');
@@ -117,8 +121,8 @@ const LinkStoreMobile = styled(LinkComum)`
 `;
 
 const HamburguerMenuBar = styled.div`
-  background-color: #f8d322;
-  height: 2px;
+  background-color: #fff;
+  height: 3px;
   width: 25px;
   border-radius: 5px;
   margin-bottom: 6.5px;
@@ -134,6 +138,9 @@ const HamburguerMenu = styled.div`
   @media (max-width: 768px) {
     display: block;
   }
+  &.active > div {
+    background-color: #f8d322;
+  }
 `;
 
 const HeaderBtn = styled(Btn)`
@@ -145,23 +152,29 @@ const HeaderBtn = styled(Btn)`
 
 const Component = ({ isHomepage, storeUrl }) => {
   const $nav = () => document.querySelector('[data-js="nav"]');
-  const showMobileMenu = () => $nav().classList.toggle('active');
+  const $hamburguerMenu = () => document.querySelector('[data-js="hamburguerMenu"]');
+  const showMobileMenu = () => {
+    $hamburguerMenu().classList.toggle('active');
+    $nav().classList.toggle('active');
+  };
   const clearMenu = () => $nav().classList.remove('active');
 
   return (
     <Header data-js="header">
       <WrapperNavigation>
         <LogoComponent showH1={isHomepage} />
-        <HamburguerMenu onClick={showMobileMenu}>
+        <HamburguerMenu data-js="hamburguerMenu" onClick={showMobileMenu}>
           <HamburguerMenuBar />
           <HamburguerMenuBar />
           <HamburguerMenuBar />
         </HamburguerMenu>
         <Nav data-js="nav">
           <Menu>
-            <LinkStoreMobile onClick={clearMenu} href={storeUrl}>
-              Loja
-            </LinkStoreMobile>
+            <MenuItem>
+              <LinkStoreMobile onClick={clearMenu} href={storeUrl}>
+                Loja
+              </LinkStoreMobile>
+            </MenuItem>
             {menuLinks.map(item => (
               <MenuItem key={item.id}>
                 <MenuLinkItem onClick={clearMenu} to={item.link} activeStyle={{ color: '#000' }}>

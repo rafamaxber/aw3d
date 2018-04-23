@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 import Welcome from '../components/Welcome';
 import VideoBar from '../components/VideoBar';
 import Testimonials from '../components/Testimonials';
-import { ComponentMiniPortfolio } from '../components/Portfolio';
+import ComponentMiniPortfolio from '../components/Portfolio';
 
 export const IndexPageTemplate = ({
   welcomeTitle,

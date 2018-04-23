@@ -25,6 +25,7 @@ const Gallery = styled(Link)`
   overflow: hidden;
   position: relative;
   z-index: 1;
+  background-color: #fff;
   :hover {
     &:after {
       content: '';
@@ -39,10 +40,20 @@ const Gallery = styled(Link)`
   }
 `;
 const BigImage = styled.div`
-  width: 65%;
+  width: 806px;
+  @media (max-width: 1237px) {
+  }
 `;
 const Thumbs = styled.div`
-  width: 35%;
+  width: 434px;
+
+  @media (max-width: 1093px) {
+    width: 405px;
+  }
+
+  @media (max-width: 918px) {
+    width: 405px;
+  }
   img {
     max-height: 225px;
   }
@@ -52,39 +63,37 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => {
-  return (
-    <Container>
-      <Title>
-        <h1>O que andamos fazendo</h1>
-      </Title>
-      <Wrapper>
-        {group.map(({ edges }) => {
-          const item = edges[0].node;
-          let photos = item.frontmatter.images.splice(3);
-          photos = item.frontmatter.images;
-          return (
-            <div key={item.fields.slug}>
-              <TitlePost>
-                <h2>{item.frontmatter.title}</h2>
-              </TitlePost>
-              <HTMLContent content={item.html} />
-              <Gallery to={item.fields.slug}>
-                <BigImage>
-                  <Image src={photos[0].src} alt={photos[0].alt} />
-                </BigImage>
-                <Thumbs>
-                  <Image src={photos[1].src} alt={photos[1].alt} />
-                  <Image src={photos[2].src} alt={photos[2].alt} />
-                </Thumbs>
-              </Gallery>
-            </div>
-          );
-        })}
-      </Wrapper>
-    </Container>
-  );
-};
+const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => (
+  <Container>
+    <Title>
+      <h1>O que andamos fazendo</h1>
+    </Title>
+    <Wrapper>
+      {group.map(({ edges }) => {
+        const item = edges[0].node;
+        let photos = item.frontmatter.images.splice(3);
+        photos = item.frontmatter.images;
+        return (
+          <div key={item.fields.slug}>
+            <TitlePost>
+              <h2>{item.frontmatter.title}</h2>
+            </TitlePost>
+            <HTMLContent content={item.html} />
+            <Gallery to={item.fields.slug}>
+              <BigImage>
+                <Image src={photos[0].src} alt={photos[0].alt} />
+              </BigImage>
+              <Thumbs>
+                <Image src={photos[1].src} alt={photos[1].alt} />
+                <Image src={photos[2].src} alt={photos[2].alt} />
+              </Thumbs>
+            </Gallery>
+          </div>
+        );
+      })}
+    </Wrapper>
+  </Container>
+);
 
 export default PortfolioPage;
 

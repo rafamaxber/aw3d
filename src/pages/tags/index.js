@@ -1,33 +1,35 @@
 import React from 'react';
-import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
+import { kebabCase } from 'lodash';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
+import { WrapperTags, Taglist, TaglistItem } from '../../components/Tag';
+import { Container, Title } from '../../components/Shared';
+
+const WrapperTagsCustom = styled(WrapperTags)`
+  min-height: 400px;
+`;
 
 const TagsPage = ({
   data: { allMarkdownRemark: { group }, site: { siteMetadata: { title } } },
 }) => (
-  <section className="section">
+  <Container>
     <Helmet title={`Tags | ${title}`} />
-    <div className="container content">
-      <div className="columns">
-        <div
-          className="column is-10 is-offset-1"
-          style={{ marginBottom: '6rem' }}
-        >
-          <h1 className="title is-size-2 is-bold-light">Tags</h1>
-          <ul className="taglist">
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    <Title>
+      <h1>Tags</h1>
+    </Title>
+    <WrapperTagsCustom>
+      <Taglist>
+        {group.map(tag => (
+          <TaglistItem key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} - ( {tag.totalCount} )
+            </Link>
+          </TaglistItem>
+        ))}
+      </Taglist>
+    </WrapperTagsCustom>
+  </Container>
 );
 
 export default TagsPage;
