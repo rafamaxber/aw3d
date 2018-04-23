@@ -101,7 +101,6 @@ export const BlogPostTemplate = ({
         <WrapperPost>
           <PostContent content={content} />
         </WrapperPost>
-        {tags && tags.length ? <Tag title="Tags" tags={tags} /> : null}
       </ContainerPost>
       <WrapperDisqus>
         <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
