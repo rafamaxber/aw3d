@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const Main = styled.div`
-  padding: 50px 0 30px;
+  padding-top: 50px;
   z-index: 0;
   position: relative;
 `;

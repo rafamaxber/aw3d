@@ -29,6 +29,7 @@ injectGlobal`
 `;
 
 const Wrapper = styled.div`
+  margin-bottom: 60px;
 `;
 const Article = styled.article`
   text-align: center;

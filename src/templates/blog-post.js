@@ -61,12 +61,16 @@ const DescriptionPost = styled.div`
 `;
 
 const WrapperDisqus = styled.div`
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 15px 0;
+`;
+const ContainerDisqus = styled.div`
   max-width: 830px;
-  margin: 60px auto;
+  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
 `;
-
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -103,7 +107,9 @@ export const BlogPostTemplate = ({
         </WrapperPost>
       </ContainerPost>
       <WrapperDisqus>
-        <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        <ContainerDisqus>
+          <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        </ContainerDisqus>
       </WrapperDisqus>
     </Wrapper>
   );
