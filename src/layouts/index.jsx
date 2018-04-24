@@ -50,12 +50,16 @@ const storeUrl = 'https://www.aw3dshop.com.br/?utm_source=site_institucional';
 
 const TemplateWrapper = ({ children, location }) => (
   <main className="main">
-    <Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang: 'pt-br',
+        amp: undefined,
+        itemScope: undefined,
+        itemType: 'http://schema.org/WebSite',
+      }}
+    >
       <title>AW3D - A sua melhor impressão</title>
-      <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
-        rel="stylesheet"
-      />
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -96,10 +100,7 @@ const TemplateWrapper = ({ children, location }) => (
 
       <meta name="twitter:card" content="##LINK_DA_IMAGEM_LARGE##" />
       <meta name="twitter:site" content="@aw3d" />
-      <meta
-        name="twitter:title"
-        content="AW3D - Bem vindo ao mundo da Impressão 3D"
-      />
+      <meta name="twitter:title" content="AW3D - Bem vindo ao mundo da Impressão 3D" />
       <meta
         name="twitter:description"
         content="É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele. No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia."
@@ -117,6 +118,7 @@ const TemplateWrapper = ({ children, location }) => (
       <meta name="msapplication-TileColor" content="#f8d322" />
       <meta name="theme-color" content="#f8d322" />
       <link rel="manifest" href={withPrefix('manifest.json')} />
+      <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
     </Helmet>
     <Header isHomepage={location.pathname === withPrefix('/')} storeUrl={storeUrl} />
     <Main>{children()}</Main>
