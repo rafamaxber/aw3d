@@ -6,10 +6,10 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
   const entryBanners = entry.getIn(['data', 'banners']);
   const banners = entryBanners ? entryBanners.toJS() : [];
 
-  const entryMiniPortfolio = entry.getIn(['data', 'miniPortfolio']);
+  const entryMiniPortfolio = entry.getIn(['data', 'miniPortfolio', 'images']);
   const miniPortfolio = entryMiniPortfolio ? entryMiniPortfolio.toJS() : [];
 
-  const entryTestimonials = entry.getIn(['data', 'testimonials']);
+  const entryTestimonials = entry.getIn(['data', 'wrapperTestimonials', 'testimonials']);
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
   return (
@@ -17,11 +17,11 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
       welcomeTitle={entry.getIn(['data', 'welcomeTitle'])}
       banners={banners}
       wrapperTestimonials={{
-        title: entry.getIn(['data', 'title']),
+        title: entry.getIn(['data', 'wrapperTestimonials', 'title']),
         testimonials,
       }}
       miniPortfolio={{
-        title: entry.getIn(['data', 'title']),
+        title: entry.getIn(['data', 'miniPortfolio', 'title']),
         images: miniPortfolio,
       }}
       content={widgetFor('body')}
