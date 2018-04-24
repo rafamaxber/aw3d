@@ -5,33 +5,11 @@ welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: banner 1
     id: 1
-    src: 'http://unsplash.it/1600/500?random&gravity=center'
+    src: /img/banner.jpg
   - alt: banner 2
     id: 2
-    src: 'http://unsplash.it/1600/500?gravity=center'
-  - alt: banner 3
-    id: 3
-    src: 'http://unsplash.it/1600/500?random&gravity=center'
-miniPortfolio:
-  title: O que andamos fazendo
-  images:
-    - alt: Chillibeans Caveira
-      id: 1
-      src: '/img/Chillibeans/Caveira/IMG_0971.jpg'
-      title: Chillibeans Caveira
-      url: /portfolio/chillibeans-trofeu-caveira/
-    - alt: Chillibeans Pimenta
-      id: 2
-      src: '/img/Chillibeans/Pimenta/pimenta1.jpg'
-      title: Chillibeans Pimenta
-      url: /portfolio/chillibeans-pimenta/
-    - alt: Nossa Senhora Achiropita
-      id: 3
-      src: '/img/Achiropita/aw3d_achiropita8.jpg'
-      title: Nossa Senhora Achiropita
-      url: /portfolio/nossa-senhora-achiropita/
+    src: /img/banner2.jpg
 wrapperTestimonials:
-  title: Clientes Satisfeitos
   testimonials:
     - author: IT4D
       avatar: /img/quote.svg
@@ -48,8 +26,8 @@ wrapperTestimonials:
       avatar: /img/quote.svg
       name: Juliana Blauth
       quote: >-
-        Foram muito prestativos em todas nossas urgências. O trabalho final ficou
-        muito bom.
+        Foram muito prestativos em todas nossas urgências. O trabalho final
+        ficou muito bom.
     - author: Tudo Mini
       avatar: /img/quote.svg
       name: Thiago Casarotto
@@ -69,9 +47,28 @@ wrapperTestimonials:
       avatar: /img/quote.svg
       name: Eduardo Kawabe
       quote: >-
-        O trabalho ficou dentro de nossa expectativa e foi entregue antes do prazo
-        estabelecido. Bom atendimento, bem claro nas explicações . Provavelmente
-        vamos fazer outros trabalhos.
+        O trabalho ficou dentro de nossa expectativa e foi entregue antes do
+        prazo estabelecido. Bom atendimento, bem claro nas explicações .
+        Provavelmente vamos fazer outros trabalhos.
+  title: Clientes Satisfeitos
+miniPortfolio:
+  images:
+    - alt: Chillibeans Caveira
+      id: 1
+      src: /img/Chillibeans/Caveira/IMG_0971.jpg
+      title: Chillibeans Caveira
+      url: /portfolio/chillibeans-trofeu-caveira/
+    - alt: Chillibeans Pimenta
+      id: 2
+      src: /img/Chillibeans/Pimenta/pimenta1.jpg
+      title: Chillibeans Pimenta
+      url: /portfolio/chillibeans-pimenta/
+    - alt: Nossa Senhora Achiropita
+      id: 3
+      src: /img/Achiropita/aw3d_achiropita8.jpg
+      title: Nossa Senhora Achiropita
+      url: /portfolio/nossa-senhora-achiropita/
+  title: O que andamos fazendo
 ---
 É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele.
 
