@@ -6,6 +6,9 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
   const entryBanners = entry.getIn(['data', 'banners']);
   const banners = entryBanners ? entryBanners.toJS() : [];
 
+  const entryMiniPortfolio = entry.getIn(['data', 'miniPortfolio']);
+  const miniPortfolio = entryMiniPortfolio ? entryMiniPortfolio.toJS() : [];
+
   const entryTestimonials = entry.getIn(['data', 'testimonials']);
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
 
@@ -13,7 +16,14 @@ const IndexPagePreview = ({ entry, widgetFor }) => {
     <IndexPageTemplate
       welcomeTitle={entry.getIn(['data', 'welcomeTitle'])}
       banners={banners}
-      testimonials={testimonials}
+      wrapperTestimonials={{
+        title: entry.getIn(['data', 'title']),
+        testimonials,
+      }}
+      miniPortfolio={{
+        title: entry.getIn(['data', 'title']),
+        images: miniPortfolio,
+      }}
       content={widgetFor('body')}
     />
   );

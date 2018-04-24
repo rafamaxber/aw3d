@@ -74,4 +74,5 @@ collections:
           - {label: "Welcome Title", name: welcomeTitle, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
           - {label: Banners, name: banners, widget: list, fields: [{label: Image, name: src, widget: image}, {label: alt, name: alt, widget: string}, {label: id, name: id, widget: string}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Author, name: author, widget: string}, {label: name, name: name, widget: string}, {label: quote, name: quote, widget: string}]}
+          - {label: Testimonials, name: wrapperTestimonials, widget: object, fields: [{ label: Title, name: title, widget: string},{label: Testimonials, name: testimonials, widget: list, fields: [{label: Author, name: author, widget: string}, {label: name, name: name, widget: string}, {label: quote, name: quote, widget: string}, {label: avatar, name: avatar, widget: image}]}]}
+          - {label: Portfolio, name: miniPortfolio, widget: object, fields: [{ label: Title, name: title, widget: string},{label: Imagens, name: images, widget: list, fields: [{label: Alt, name: alt, widget: string}, {label: id, name: id, widget: string}, {label: src, name: src, widget: image}, {label: title, name: title, widget: string},{label: url, name: url, widget: string}]}]}
