@@ -37,10 +37,10 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/quem-somos/index.md"
-        label: "About"
-        name: "about"
+        label: "Sobre"
+        name: "Sobre"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "sobre-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
       - file: "src/pages/products/index.md"

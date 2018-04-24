@@ -1,5 +1,5 @@
 ---
-templateKey: 'about-page'
+templateKey: 'sobre-page'
 path: /quem-somos
 title: Sobre a AW3D
 image: /img/selo_150px.jpg
