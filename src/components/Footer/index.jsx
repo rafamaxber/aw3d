@@ -1,9 +1,8 @@
 import React from 'react';
-import Link, { withPrefix } from 'gatsby-link';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { Container } from '../Shared';
 import Newsletter from '../Newsletter';
-import Logo from '../../img/logo_aw3d.svg';
 import Selo from '../../img/selo_150px.jpg';
 import { menuLinks } from '../Header';
 
@@ -14,7 +13,7 @@ const Footer = styled.footer`
 
 const Wrapper = styled(Container)`
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -84,16 +83,13 @@ const Component = () => (
         ))}
       </Column>
 
-      <Column>
-        <LinkCustom
-          href="mailto:vendas@aw3d.com.br"
-          title="Entre em contato por e-mail"
-        >
+      <Column itemscope itemtype="http://schema.org/LocalBusiness">
+        <LinkCustom href="mailto:vendas@aw3d.com.br" title="Entre em contato por e-mail">
           vendas@aw3d.com.br
         </LinkCustom>
-        <LinkCustom>(11) 3105-3633</LinkCustom>
-        <LinkCustom>(11) 97544-2029</LinkCustom>
-        <LinkCustom>(11) 97466-2955</LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:1131053633">(11) 3105-3633</LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:11975442029">(11) 97544-2029</LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:11974662955">(11) 97466-2955</LinkCustom>
       </Column>
 
       <Column>
@@ -106,8 +102,7 @@ const Component = () => (
       </Column>
     </Wrapper>
     <Copyright>
-      AW3D A melhor impressão CNPJ: 24.585.302/0001-37 © Todos os direitos
-      reservados. {year}
+      AW3D A melhor impressão CNPJ: 24.585.302/0001-37 © Todos os direitos reservados. {year}
     </Copyright>
   </Footer>
 );

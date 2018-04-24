@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Container, Btn } from '../Shared';
 import LogoComponent from '../Logo';
@@ -45,6 +45,7 @@ const Header = styled.header`
   @media (max-width: 768px) {
     height: 50px;
     background-color: #f8d322;
+    border-bottom: none;
   }
 `;
 
@@ -157,7 +158,10 @@ const Component = ({ isHomepage, storeUrl }) => {
     $hamburguerMenu().classList.toggle('active');
     $nav().classList.toggle('active');
   };
-  const clearMenu = () => $nav().classList.remove('active');
+  const clearMenu = () => {
+    $nav().classList.remove('active');
+    $hamburguerMenu().classList.remove('active');
+  };
 
   return (
     <Header data-js="header">
