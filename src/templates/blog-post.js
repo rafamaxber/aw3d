@@ -80,17 +80,9 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   full_image,
-  siteConfig,
-  slug,
+  disqus,
 }) => {
   const PostContent = contentComponent || Content;
-  const { disqusShortname } = siteConfig;
-  const disqusConfig = {
-    url: `${siteConfig.basePath}${slug}`,
-    identifier: 1,
-    title,
-  };
-
   return (
     <Wrapper>
       {helmet || ''}
@@ -106,11 +98,7 @@ export const BlogPostTemplate = ({
           <PostContent content={content} />
         </WrapperPost>
       </ContainerPost>
-      <WrapperDisqus>
-        <ContainerDisqus>
-          <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-        </ContainerDisqus>
-      </WrapperDisqus>
+      {disqus || ''}
     </Wrapper>
   );
 };
@@ -126,14 +114,17 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
   const { siteMetadata: siteConfig } = data.site;
-
+  const { disqusShortname } = siteConfig;
+  const disqusConfig = {
+    url: `${siteConfig.basePath}${post.fields.slug}`,
+    identifier: 1,
+    title: post.frontmatter.title,
+  };
   return (
     <BlogPostTemplate
-      siteConfig={siteConfig}
       content={post.html}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      slug={post.fields.slug}
       helmet={
         <Helmet
           description={post.frontmatter.description}
@@ -144,6 +135,13 @@ const BlogPost = ({ data }) => {
       title={post.frontmatter.title}
       full_image={post.frontmatter.full_image}
       date={post.frontmatter.date}
+      disqus={
+        <WrapperDisqus>
+          <ContainerDisqus>
+            <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+          </ContainerDisqus>
+        </WrapperDisqus>
+      }
     />
   );
 };
