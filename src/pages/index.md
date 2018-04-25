@@ -65,7 +65,7 @@ miniPortfolio:
       url: /portfolio/chillibeans-pimenta/
     - alt: Nossa Senhora Achiropita
       id: 3
-      src: /img/Achiropita/aw3d_achiropita8.jpg
+      src: /img/thumb3.jpg
       title: Nossa Senhora Achiropita
       url: /portfolio/nossa-senhora-achiropita/
   title: O que andamos fazendo
