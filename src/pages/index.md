@@ -55,12 +55,12 @@ miniPortfolio:
   images:
     - alt: Chillibeans Caveira
       id: 1
-      src: /img/Chillibeans/Caveira/IMG_0971.jpg
+      src: /img/thumb1.jpg
       title: Chillibeans Caveira
       url: /portfolio/chillibeans-trofeu-caveira/
     - alt: Chillibeans Pimenta
       id: 2
-      src: /img/Chillibeans/Pimenta/pimenta1.jpg
+      src: /img/thumb2.jpg
       title: Chillibeans Pimenta
       url: /portfolio/chillibeans-pimenta/
     - alt: Nossa Senhora Achiropita
