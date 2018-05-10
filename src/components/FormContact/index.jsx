@@ -65,7 +65,7 @@ class FormContact extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(() => navigateTo('/thanks/'))
+      .then(() => navigateTo('/obrigado/'))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -76,7 +76,7 @@ class FormContact extends React.Component {
       <Form
         name="contact"
         method="post"
-        action="/thanks/"
+        action="/obrigado/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
