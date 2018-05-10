@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Btn } from '../Shared';
+import { navigateTo } from 'gatsby-link';
 
 const Form = styled.form`
   max-width: 600px;
@@ -45,37 +46,82 @@ const ButtonWrapper = styled.div`
   justify-content: flex-end;
 `;
 
-const FormContact = () => {
-  return (
-    <Form>
-      <Field>
-        <Label>
-          Nome*
-        </Label>
-        <Input placeholder="Jonh Due" type="text" id="nome" name="nome" required="true" />
-      </Field>
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+class FormContact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-      <Field>
-        <Label>
-          E-mail*
-        </Label>
-        <Input placeholder="jonh@gmail.com" type="email" id="email" name="email" required="true" />
-      </Field>
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-      <Field>
-        <Label>
-          Comentário*
-        </Label>
-        <Textarea placeholder="Olá gostaria de saber mais sobre a GTMax3D..." id="comentario" name="comentario" required="true" rows="6" />
-      </Field>
-      <ButtonWrapper>
-        <BtnSend type="submit">
-          Enviar
-        </BtnSend>
-      </ButtonWrapper>
-    </Form>
-  );
-};
+  handleSubmit = e => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state }),
+    })
+      .then(() => navigateTo('/thanks/'))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  render() {
+    return (
+      <Form
+        name="contact"
+        method="post"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <Field>
+          <Label>Nome*</Label>
+          <Input
+            placeholder="Jonh Due"
+            type="text"
+            id="nome"
+            name="nome"
+            required="true"
+            onChange={this.handleChange}
+          />
+        </Field>
+        <Field>
+          <Label>E-mail*</Label>
+          <Input
+            placeholder="jonh@gmail.com"
+            type="email"
+            id="email"
+            name="email"
+            required="true"
+            onChange={this.handleChange}
+          />
+        </Field>
+        <Field>
+          <Label>Comentário*</Label>
+          <Textarea
+            placeholder="Olá gostaria de saber mais sobre a GTMax3D..."
+            id="comentario"
+            name="comentario"
+            required="true"
+            rows="6"
+            onChange={this.handleChange}
+          />
+        </Field>
+        <ButtonWrapper>
+          <BtnSend type="submit">Enviar</BtnSend>
+        </ButtonWrapper>
+      </Form>
+    );
+  }
+}
 
 export default FormContact;
 
