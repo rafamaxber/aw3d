@@ -69,9 +69,9 @@ const Newsletter = () => (
       <Text>
         Assine nossa Newsletter. Inscreva-se para receber notícias e ofertas exclusivas!
       </Text>
-      <Form>
-        <Input placeholder="Digite seu e-mail" type="email" id="email" name="email" required="true" />
-        <Button type="submit">Enviar</Button>
+      <Form action="https://aw3d.us15.list-manage.com/subscribe/post?u=b7d57283fb282c79fa4c323f4&amp;id=6a6d140da9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <Input placeholder="Digite seu e-mail" type="email" id="mce-EMAIL" name="EMAIL" required="true" />
+        <Button type="submit" name="subscribe" id="mc-embedded-subscribe">Enviar</Button>
       </Form>
     </WrapperContainer>
   </Wrapper>
