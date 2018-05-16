@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import FaFacebook from 'react-icons/lib/fa/facebook';
+import FaInstagram from 'react-icons/lib/fa/instagram';
 import { Container, Btn } from '../Shared';
 import LogoComponent from '../Logo';
 
@@ -101,12 +103,12 @@ const MenuItem = styled.li`
 
 const MenuLinkItem = styled(Link)`
   text-decoration: none;
-  color: #9e9f9e;
+  color: #000;
   font-weight: 400;
-  font-size: 1.8em;
+  font-size: 1.6em;
   transition: 0.2s ease;
   :hover {
-    color: #545454;
+    color: #949494;
   }
   @media (max-width: 768px) {
     font-size: 2.5em;
@@ -144,14 +146,33 @@ const HamburguerMenu = styled.div`
   }
 `;
 
-const HeaderBtn = styled(Btn)`
+const IconBtn = styled.a`
+  color: #000;
+  font-size: 1.7em;
   margin: 0 5px;
+  :hover {
+    color: #949494;
+  }
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
-const Component = ({ isHomepage, storeUrl }) => {
+const WrapperSocialMobile = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const HeaderBtn = styled(Btn)`
+  margin: 0 25px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Component = ({
+  isHomepage, storeUrl, facebookUrl, instagramUrl,
+}) => {
   const $nav = () => document.querySelector('[data-js="nav"]');
   const $hamburguerMenu = () => document.querySelector('[data-js="hamburguerMenu"]');
   const showMobileMenu = () => {
@@ -186,9 +207,25 @@ const Component = ({ isHomepage, storeUrl }) => {
                 </MenuLinkItem>
               </MenuItem>
             ))}
+            <MenuItem>
+              <WrapperSocialMobile>
+                <LinkStoreMobile onClick={clearMenu} href={facebookUrl}>
+                  <FaFacebook /> Facebook 
+                </LinkStoreMobile>
+                <LinkStoreMobile onClick={clearMenu} href={instagramUrl}>
+                  <FaInstagram /> Instagram
+                </LinkStoreMobile>
+              </WrapperSocialMobile>
+            </MenuItem>
           </Menu>
         </Nav>
         <HeaderBtn href={storeUrl}>Loja</HeaderBtn>
+        <IconBtn href={facebookUrl} title="Ir para Facebook AW3D">
+          <FaFacebook />
+        </IconBtn>
+        <IconBtn href={instagramUrl} title="Ir para Instagram AW3D">
+          <FaInstagram />
+        </IconBtn>
       </WrapperNavigation>
     </Header>
   );
@@ -197,6 +234,8 @@ const Component = ({ isHomepage, storeUrl }) => {
 Component.propTypes = {
   isHomepage: PropTypes.bool.isRequired,
   storeUrl: PropTypes.string.isRequired,
+  facebookUrl: PropTypes.string.isRequired,
+  instagramUrl: PropTypes.string.isRequired,
 };
 
 export default Component;
