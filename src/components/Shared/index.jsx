@@ -16,7 +16,7 @@ export const Main = styled.div`
 
 export const Title = styled.div`
   text-align: center;
-  padding: 50px 0 30px;
+  padding: 90px 0 30px;
   h1, h2, h3, h4 {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
