@@ -47,6 +47,8 @@ injectGlobal`
 `;
 
 const storeUrl = 'https://www.aw3dshop.com.br/?utm_source=site_institucional';
+const facebookUrl = 'https://www.facebook.com/aw3dsolutions';
+const instagramUrl = 'https://www.facebook.com/aw3dsolutions';
 
 const TemplateWrapper = ({ children, location }) => (
   <main className="main">
@@ -120,7 +122,12 @@ const TemplateWrapper = ({ children, location }) => (
       <link rel="manifest" href={withPrefix('manifest.json')} />
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js" />
     </Helmet>
-    <Header isHomepage={location.pathname === withPrefix('/')} storeUrl={storeUrl} />
+    <Header
+      isHomepage={location.pathname === withPrefix('/')}
+      storeUrl={storeUrl}
+      facebookUrl={facebookUrl}
+      instagramUrl={instagramUrl}
+    />
     <Main>{children()}</Main>
     <Footer />
   </main>
