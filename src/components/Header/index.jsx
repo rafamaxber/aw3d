@@ -210,7 +210,7 @@ const Component = ({
             <MenuItem>
               <WrapperSocialMobile>
                 <LinkStoreMobile onClick={clearMenu} href={facebookUrl}>
-                  <FaFacebook /> Facebook 
+                  <FaFacebook /> Facebook
                 </LinkStoreMobile>
                 <LinkStoreMobile onClick={clearMenu} href={instagramUrl}>
                   <FaInstagram /> Instagram
