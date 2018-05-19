@@ -9,6 +9,10 @@ import 'slick-carousel/slick/slick-theme.css';
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   .bannerSlider {
+    max-width: 1400;
+    .bannerImage--img {
+      margin: auto;
+    }
     .slick-next,
     .slick-prev {
       z-index: 1;
@@ -37,7 +41,7 @@ const Component = ({ images }) => {
       {
         images.map(item => (
           <div className="bannerImage" key={item.id}>
-            <img src={item.src} alt={item.alt} />
+            <img className="bannerImage--img" src={item.src} alt={item.alt} />
           </div>
         ))
       }
