@@ -24,6 +24,10 @@ const inputStyle = `
   font-size: 1.5em;
   width: 100%;
   border: 1px solid #bdbdbd;
+  border-radius:  4px;
+  :focus {
+    outline: none;
+  }
 `;
 
 const Input = styled.input`

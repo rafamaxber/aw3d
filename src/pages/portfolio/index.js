@@ -19,26 +19,23 @@ const TitlePost = Title.extend`
 
 const Gallery = styled(Link)`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-content: center;
-  max-height: 450px;
+  max-height: 420px;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  background-color: #fff;
 `;
 const BigImage = styled.div`
-  width: 806px;
+  width: 750px;
   @media (max-width: 1237px) {
   }
 `;
 const Thumbs = styled.div`
-  width: 434px;
-
+  width: 405px;
   @media (max-width: 1093px) {
-    width: 405px;
+    width: 280px;
   }
-
   @media (max-width: 918px) {
     width: 405px;
   }
@@ -53,9 +50,6 @@ const Image = styled.img`
 
 const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => (
   <Container>
-    <Title>
-      <h1>O que andamos fazendo</h1>
-    </Title>
     <Wrapper>
       {group.map(({ edges }) => {
         const item = edges[0].node;

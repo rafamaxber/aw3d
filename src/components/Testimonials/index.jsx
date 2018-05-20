@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { injectGlobal } from 'styled-components';
 import Slider from 'react-slick';
-import { Container, Title } from '../Shared';
-
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import { Container, Title } from '../Shared';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -62,7 +62,6 @@ const Cite = styled.cite`
 const Name = styled.div`
   font-size: 2em;
   font-style: normal;
-
 `;
 
 const Testimonials = ({ wrapperTestimonials }) => {
@@ -73,7 +72,7 @@ const Testimonials = ({ wrapperTestimonials }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     autoplay: true,
     responsive: [
       {

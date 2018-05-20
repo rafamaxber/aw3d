@@ -50,6 +50,7 @@ const TitlePost = styled(Title)`
 `;
 const WrapperPost = styled.div`
   font-size: 1.8em;
+  margin-bottom: 100px;
 `;
 const DatePost = styled.div`
   font-size: 1.4em;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { Container } from '../Shared';
 
@@ -8,13 +9,15 @@ const Wrapper = styled.div`
   min-height: 315px;
   background-color: #363636;
   @media (min-width: 760px) {
-    margin: 50px 0;
+    margin: 90px 0 0px;
   }
 `;
 
 const ContainerVideoBar = styled(Container)`
   display: flex;
   padding: 0 0 0 0;
+  margin: 0 auto 0;
+  max-width: 1400px;
   justify-content: space-between;
   @media (max-width: 880px) {
     display: block;
@@ -25,7 +28,7 @@ const WrapperText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
   @media (max-width: 880px) {
     margin: auto;
     width: 100%;
@@ -54,12 +57,11 @@ const Text = styled.div`
 const Iframe = styled.iframe`
   padding: 0 0 0 0;
   margin: 0 0 0 0;
-  width: 45%;
+  width: 51.5%;
   display: block;
   @media (max-width: 880px) {
     margin: auto;
     width: 100%;
-    max-width: 560px;
   }
 `;
 
@@ -68,15 +70,16 @@ const VideoBar = () => (
     <ContainerVideoBar>
       <WrapperText>
         <Text>
-          A AW3D é revendedora autorizada
-          GTMax3D em São Paulo.
-          <a href="#tt">Visite nosso showroom!</a>
+          A AW3D é revendedora autorizada GTMax3D em São Paulo.
+          <Link href="/contato" to="/contato">
+            Visite nosso showroom!
+          </Link>
         </Text>
       </WrapperText>
       <Iframe
         title="aw3d video"
-        width="560"
-        height="315"
+        width="100%"
+        height="420"
         src="https://www.youtube.com/embed/SHcETXwGLK0"
         frameBorder="0"
         allow="autoplay; encrypted-media"

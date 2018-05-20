@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   font-size: 1.8em;
   max-width: 700px;
   text-align: justify;
-  margin: auto;
+  margin: 0 auto 80px;
   .content a {
     text-decoration: underline;
   }

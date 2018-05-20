@@ -24,7 +24,6 @@ const Wrapper = styled(Container)`
 `;
 
 const styleLink = `
-  display: block;
   color: inherit;
   margin: 5px 0;
 `;
@@ -39,6 +38,8 @@ const ItemLink = styled(Link)`
 const Column = styled.div`
   font-size: 1.6em;
   width: 25%;
+  display: flex;
+  flex-direction: column;
   @media (max-width: 600px) {
     :last-child {
       margin-top: 0;
@@ -51,7 +52,10 @@ const Column = styled.div`
 const LinkCustom = styled.a`
   ${styleLink};
 `;
-
+const Address = styled.address`
+  font-style: normal;
+  margin-top: 7px;
+`;
 const Copyright = styled.div`
   text-align: center;
   font-size: 1.2em;
@@ -61,7 +65,7 @@ const Copyright = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100px;
+  width: 140px;
 `;
 
 const date = new Date();
@@ -87,18 +91,24 @@ const Component = () => (
         <LinkCustom href="mailto:vendas@aw3d.com.br" title="Entre em contato por e-mail">
           vendas@aw3d.com.br
         </LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:1131053633">(11) 3105-3633</LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:11975442029">(11) 97544-2029</LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:11974662955">(11) 97466-2955</LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:1131053633">
+          (11) 3105-3633
+        </LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:11975442029">
+          (11) 97544-2029
+        </LinkCustom>
+        <LinkCustom itemprop="telephone" href="tel:11974662955">
+          (11) 97466-2955
+        </LinkCustom>
       </Column>
 
       <Column>
         Conheça nosso Showroom
-        <address>
+        <Address>
           Rua Roberto Simonsen 120 Sala 304<br />
           Centro de São Paulo <br />
           Ligue e agende uma visita!
-        </address>
+        </Address>
       </Column>
     </Wrapper>
     <Copyright>

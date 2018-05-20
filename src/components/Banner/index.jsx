@@ -9,7 +9,11 @@ import 'slick-carousel/slick/slick-theme.css';
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   .bannerSlider {
-    max-width: 1400;
+    max-width: 1400px;
+    margin-top: 20px;
+    @media (max-width: 768px) {
+      margin-top: 0px;
+    }
     .bannerImage--img {
       margin: auto;
     }
@@ -38,13 +42,11 @@ const Component = ({ images }) => {
 
   return (
     <Slider {...settings} className="bannerSlider">
-      {
-        images.map(item => (
-          <div className="bannerImage" key={item.id}>
-            <img className="bannerImage--img" src={item.src} alt={item.alt} />
-          </div>
-        ))
-      }
+      {images.map(item => (
+        <div className="bannerImage" key={item.id}>
+          <img className="bannerImage--img" src={item.src} alt={item.alt} />
+        </div>
+      ))}
     </Slider>
   );
 };

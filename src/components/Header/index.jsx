@@ -41,7 +41,7 @@ const Header = styled.header`
   width: 100%;
   z-index: 1;
   height: 70px;
-  border-bottom: 1px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
   display: flex;
   align-items: center;
   @media (max-width: 768px) {

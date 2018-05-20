@@ -73,10 +73,13 @@ miniPortfolio:
       url: /portfolio/nossa-senhora-achiropita/
   title: O que andamos fazendo
 ---
-É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele.
+É com muito prazer que a AW3D lhe apresenta o mundo<br/>
+da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele.
 
 No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia.
 
-A AW3D é revenda e assistência técnica autorizada da GTMax3D em São Paulo, marca com a melhor qualidade de impressão 3D e líder de vendas no seu segmento de FDM no Brasil.
+A AW3D é revenda e assistência técnica autorizada da GTMax3D em São Paulo, marca com<br/>
+a melhor qualidade de impressão 3D e líder de vendas no seu segmento de FDM no Brasil.
 
-A AW3D e a GTMax3D quer estar junto com você nessas novas descobertas, faremos parte da mais nova revolução industrial.
+A AW3D e a GTMax3D quer estar junto com você nessas novas descobertas,<br/>
+faremos parte da mais nova revolução industrial.

@@ -47,31 +47,53 @@ const Input = styled.input`
   padding: 15px;
   width: 70%;
   font-size: 1.8em;
+  margin: 0 5px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+
   :focus {
     outline: none;
-    border: none;
   }
 `;
 const Button = styled.button`
-  width: 28%;
-  font-size: 1.8em;
-  text-transform: uppercase;
+  background: #f8d322;
   border: none;
-  background-color: #f8d322;
+  border-radius: 4px;
   color: #000;
-  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px 35px;
+  text-decoration: none;
+  position: relative;
+  border-bottom: none;
+  font-size: 2em;
   cursor: pointer;
 `;
 
 const Newsletter = () => (
   <Wrapper>
     <WrapperContainer>
-      <Text>
-        Assine nossa Newsletter. Inscreva-se para receber notícias e ofertas exclusivas!
-      </Text>
-      <Form action="https://aw3d.us15.list-manage.com/subscribe/post?u=b7d57283fb282c79fa4c323f4&amp;id=6a6d140da9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <Input placeholder="Digite seu e-mail" type="email" id="mce-EMAIL" name="EMAIL" required="true" />
-        <Button type="submit" name="subscribe" id="mc-embedded-subscribe">Enviar</Button>
+      <Text>Assine nossa Newsletter. Inscreva-se para receber notícias e ofertas exclusivas!</Text>
+      <Form
+        action="https://aw3d.us15.list-manage.com/subscribe/post?u=b7d57283fb282c79fa4c323f4&amp;id=6a6d140da9"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+      >
+        <Input
+          placeholder="Digite seu e-mail"
+          type="email"
+          id="mce-EMAIL"
+          name="EMAIL"
+          required="true"
+        />
+        <Button type="submit" name="subscribe" id="mc-embedded-subscribe">
+          Enviar
+        </Button>
       </Form>
     </WrapperContainer>
   </Wrapper>
