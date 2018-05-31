@@ -10,12 +10,26 @@ import 'slick-carousel/slick/slick-theme.css';
 injectGlobal`
   .bannerSlider {
     max-width: 1400px;
-    margin-top: 20px;
+    margin: 20px auto 0;
     @media (max-width: 768px) {
       margin-top: 0px;
     }
     .bannerImage--img {
       margin: auto;
+    }
+    .slick-dots {
+      bottom: 15px;
+    }
+    .slick-dots li {
+      width: 10px;
+    }
+    .slick-dots li button:before {
+      font-size: 15px;
+      color: #fff;
+    }
+    .slick-dots li.slick-active button:before {
+      color: #fff;
+      opacity: .8
     }
     .slick-next,
     .slick-prev {
