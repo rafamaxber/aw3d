@@ -53,11 +53,13 @@ const NextArrow = styled.div`
   z-index: 1;
   top: 0;
   bottom: 0;
+  cursor: pointer;
   margin: auto;
   height: 20px;
   right: 2%;
 `;
 const PrevArrow = styled.div`
+  cursor: pointer;
   left: 2%;
   position: absolute;
   z-index: 1;
