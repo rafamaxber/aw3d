@@ -1,10 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { injectGlobal } from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import PropTypes from 'prop-types';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Arrow from '../../img/next.svg';
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -44,6 +45,47 @@ injectGlobal`
   }
 `;
 
+const ArrowImage = styled.img`
+  width: 20px;
+`;
+const NextArrow = styled.div`
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 20px;
+  right: 2%;
+`;
+const PrevArrow = styled.div`
+  left: 2%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 20px;
+  transform: rotate(180deg);
+`;
+
+const SampleNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <NextArrow onClick={onClick}>
+      <ArrowImage src={Arrow} />
+    </NextArrow>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <PrevArrow onClick={onClick}>
+      <ArrowImage src={Arrow} />
+    </PrevArrow>
+  );
+};
+
 const Component = ({ images }) => {
   const settings = {
     dots: true,
@@ -52,6 +94,8 @@ const Component = ({ images }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
