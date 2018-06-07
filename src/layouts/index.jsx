@@ -86,7 +86,7 @@ const TemplateWrapper = ({ children, location }) => (
       />
       <meta
         name="description"
-        content="É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele. No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
       />
 
       <meta property="fb:admins" content="##FACEBOOK_ID##" />
@@ -96,7 +96,7 @@ const TemplateWrapper = ({ children, location }) => (
       <meta property="og:image" content="imagem do site (LINK ABSOLUTO)" />
       <meta
         property="og:description"
-        content="É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele. No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
       />
       <meta property="og:site_name" content="AW3D" />
 
@@ -105,7 +105,7 @@ const TemplateWrapper = ({ children, location }) => (
       <meta name="twitter:title" content="AW3D - Bem vindo ao mundo da Impressão 3D" />
       <meta
         name="twitter:description"
-        content="É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele. No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
       />
       <meta property="twitter:image:src" content="##LINK_DA_IMAGEM##" />
 
@@ -113,7 +113,7 @@ const TemplateWrapper = ({ children, location }) => (
       <meta itemProp="name" content="Título da página" />
       <meta
         itemProp="description"
-        content="É com muito prazer que a AW3D lhe apresenta o mundo da Impressão 3D e pode acreditar, você não vai conseguir viver mais sem ele. No trabalho, na escola, em casa, a impressão 3D irá fazer cada vez mais mais parte do seu dia a dia."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
       />
       <meta itemProp="image" content="imagem da página" />
 

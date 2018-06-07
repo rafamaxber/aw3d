@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import Content, { HTMLContent } from '../components/Content';
 import { Container, Title } from '../components/Shared';
 import Map from '../components/Map';
@@ -14,6 +15,10 @@ export const ContactPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <Wrapper>
+      <Helmet
+        title="Contato"
+        description="Visite o nosso showroom AW3D . Venha ver de perto as impressoras 3D da GTMax3D. Impressora PRO CORE A1v2, Impressora PRO CORE A3, Impressora PRO CORE H4, Impressora PRO CORE GT4, Filamento ABS MG94, Filamento PLA, Filamento Tritan."
+      />
       <Title>
         <h1>{title}</h1>
       </Title>

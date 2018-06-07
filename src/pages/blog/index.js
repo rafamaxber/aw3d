@@ -43,7 +43,11 @@ const WrapperText = styled.div`
 `;
 const BlogPage = ({ data: { allMarkdownRemark: all } }) => (
   <Container>
-    <Helmet title="Blog" />
+    <Helmet
+      title="Blog"
+      description="Impressão 3D, Impressora 3D, AW3D, GTMAx3D, Filamento ABS, Filamento PLA, Filamento Tritan, Protótipos.
+Fique por dentro de tudo o que acontece no mundo da impressão 3D."
+    />
     <Title>
       <h1>Blog</h1>
     </Title>

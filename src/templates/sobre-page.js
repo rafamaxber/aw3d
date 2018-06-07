@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Content, { HTMLContent } from '../components/Content';
 import { Container, Title } from '../components/Shared';
@@ -19,6 +20,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <Container>
+      <Helmet
+        title="Quem Somos"
+        description="A AW3D possui profissionais altamente qualificados junto a GTMax3D para garantir a qualidade do seu trabalho seja para atender a indústria, arquitetura, engenharia, medicina/ odonto, educação, eventos, brindes personalizados entre outros."
+      />
       <Title>
         <h1>{title}</h1>
       </Title>
