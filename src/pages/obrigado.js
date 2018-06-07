@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import {
   Container,
@@ -36,14 +37,16 @@ const Btn = styled(Link)`
   font-size: 1.5em;
 `;
 const StoreBtn = Btn.withComponent('a');
+
 const Span = styled.span`
-  margin: 0 10px;
+  margin: 0px 10px;
   display: inline-block;
   font-size: 1.5em;
 `;
 
 const Obrigado = () => (
   <Wrapper>
+    <Helmet title="Agradecemos o contato!" />
     <Title>
       <h1>Nós da AW3D agradecemos o contato!</h1>
     </Title>
