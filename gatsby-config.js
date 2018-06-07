@@ -9,9 +9,11 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        trackingId: 'UA-116448182-1',
+        id: 'UA-76627459-1',
+        includeInDevelopment: false,
+        gtmPreview: 'aw3d',
       },
     },
     {
