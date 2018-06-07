@@ -9,6 +9,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Main } from '../components/Shared';
 
+import Thumb from '../img/thumb1.jpg';
+import LargeThumb from '../img/banner1.jpg';
+
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   *, *:after, *:before {
@@ -50,6 +53,15 @@ const storeUrl = 'https://www.aw3dshop.com.br/?utm_source=site_institucional';
 const facebookUrl = 'https://www.facebook.com/aw3dsolutions';
 const instagramUrl = 'https://www.facebook.com/aw3dsolutions';
 
+const dataLayerGA = `
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date());
+  gtag('config', 'UA-76627459-1');
+`;
+
 const TemplateWrapper = ({ children, location }) => (
   <main className="main">
     <Helmet
@@ -60,6 +72,18 @@ const TemplateWrapper = ({ children, location }) => (
         itemType: 'http://schema.org/WebSite',
       }}
     >
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76627459-1" />
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments)
+          }
+          gtag('js', new Date());
+          gtag('config', 'UA-76627459-1');
+        `}
+      </script>
+
       <title>AW3D - A sua melhor impressão</title>
       <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
       <link
@@ -86,36 +110,28 @@ const TemplateWrapper = ({ children, location }) => (
       />
       <meta
         name="description"
-        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D"
       />
 
       <meta property="fb:admins" content="##FACEBOOK_ID##" />
       <meta property="og:url" content="https://aw3d.com.br/" />
       <meta property="og:type" content="page" />
       <meta property="og:title" content="AW3D - Impressão 3D" />
-      <meta property="og:image" content="imagem do site (LINK ABSOLUTO)" />
+      <meta property="og:image" content={Thumb} />
       <meta
         property="og:description"
-        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D"
       />
       <meta property="og:site_name" content="AW3D" />
 
-      <meta name="twitter:card" content="##LINK_DA_IMAGEM_LARGE##" />
+      <meta name="twitter:card" content={Thumb} />
       <meta name="twitter:site" content="@aw3d" />
       <meta name="twitter:title" content="AW3D - Bem vindo ao mundo da Impressão 3D" />
       <meta
         name="twitter:description"
-        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
+        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D"
       />
-      <meta property="twitter:image:src" content="##LINK_DA_IMAGEM##" />
-
-      <link rel="author" href="##google plus do autor##" />
-      <meta itemProp="name" content="##Título da página##" />
-      <meta
-        itemProp="description"
-        content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
-      />
-      <meta itemProp="image" content="##imagem da página##" />
+      <meta property="twitter:image:src" content={LargeThumb} />
 
       <meta name="msapplication-TileColor" content="#f8d322" />
       <meta name="theme-color" content="#f8d322" />

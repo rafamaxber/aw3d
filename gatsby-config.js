@@ -8,14 +8,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
-    {
+    /*{
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'UA-76627459-1',
         includeInDevelopment: false,
         gtmPreview: 'aw3d',
       },
-    },
+    },*/
     {
       resolve: 'gatsby-source-filesystem',
       options: {
