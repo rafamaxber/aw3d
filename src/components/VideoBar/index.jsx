@@ -57,14 +57,13 @@ const Text = styled.div`
 const Iframe = styled.iframe`
   padding: 0 0 0 0;
   margin: 0 0 0 0;
-  width: 51.5%;
+  width: 56%;
   display: block;
   @media (max-width: 880px) {
     margin: auto;
     width: 100%;
   }
 `;
-
 const VideoBar = () => (
   <Wrapper>
     <ContainerVideoBar>
@@ -80,7 +79,7 @@ const VideoBar = () => (
         title="aw3d video"
         width="100%"
         height="420"
-        src="https://www.youtube.com/embed/SHcETXwGLK0"
+        src="https://www.youtube.com/embed/zcY_jEifNt4"
         frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
