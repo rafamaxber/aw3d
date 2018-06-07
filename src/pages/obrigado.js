@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+
 import {
   Container,
   Title,
 } from '../components/Shared';
+
+import scriptConversionId from '../components/LeadDataLayer';
 
 const Wrapper = styled(Container)`
   max-width: 700px;
@@ -61,6 +64,7 @@ const Obrigado = () => (
         Ir para a pagina inicial
       </Btn>
     </ContainerBtns>
+    <span dangerouslySetInnerHTML={{ __html: scriptConversionId }}></span>
   </Wrapper>
 );
 
