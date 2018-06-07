@@ -22,8 +22,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     <Container>
       <Helmet
         title="Quem Somos"
-        description="A AW3D possui profissionais altamente qualificados junto a GTMax3D para garantir a qualidade do seu trabalho seja para atender a indústria, arquitetura, engenharia, medicina/ odonto, educação, eventos, brindes personalizados entre outros."
-      />
+      >
+        <meta name="description" content="A AW3D possui profissionais altamente qualificados junto a GTMax3D para garantir a qualidade do seu trabalho seja para atender a indústria, arquitetura, engenharia, medicina/ odonto, educação, eventos, brindes personalizados entre outros." />
+      </Helmet>
       <Title>
         <h1>{title}</h1>
       </Title>

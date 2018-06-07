@@ -109,13 +109,13 @@ const TemplateWrapper = ({ children, location }) => (
       />
       <meta property="twitter:image:src" content="##LINK_DA_IMAGEM##" />
 
-      <link rel="author" href="google plus do autor" />
-      <meta itemProp="name" content="Título da página" />
+      <link rel="author" href="##google plus do autor##" />
+      <meta itemProp="name" content="##Título da página##" />
       <meta
         itemProp="description"
         content="AW3D, revenda autorizada GTMAx3D em São Paulo. Profissionais qualificados direto com a fábrica. Impressora 3D, Filamentos ABS, PLA, Tritan e Impressão 3D."
       />
-      <meta itemProp="image" content="imagem da página" />
+      <meta itemProp="image" content="##imagem da página##" />
 
       <meta name="msapplication-TileColor" content="#f8d322" />
       <meta name="theme-color" content="#f8d322" />

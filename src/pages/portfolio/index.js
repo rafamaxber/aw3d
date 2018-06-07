@@ -53,8 +53,9 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => (
   <Container>
     <Helmet
       title="Portfólio"
-      description="A AW3D atua no mercado de protótipos e mock-ups, atendendo a uma das maiores necessidades da indústria mundial que é a redução de tempo de desenvolvimento de novos produtos. A tecnologia de Impressão 3D GTMax3D entrega uma solução de baixíssimo custo, rapidez, personalização e resistência." 
-    />
+    >
+      <meta name="description" content="A AW3D atua no mercado de protótipos e mock-ups, atendendo a uma das maiores necessidades da indústria mundial que é a redução de tempo de desenvolvimento de novos produtos. A tecnologia de Impressão 3D GTMax3D entrega uma solução de baixíssimo custo, rapidez, personalização e resistência." />
+    </Helmet>
     <Wrapper>
       {group.map(({ edges }) => {
         const item = edges[0].node;
