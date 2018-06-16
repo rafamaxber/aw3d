@@ -1,5 +1,4 @@
-# robots.txt gerado em 
-# marketingdebusca.com.br/robots-txt/
-Disallow: /admin
-Disallow: /admin/*
 User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/*
