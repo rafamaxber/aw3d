@@ -12,7 +12,9 @@ banners:
   - alt: banner 3
     id: 3
     src: /img/banner3.jpg
-  - src: /img/banner_aw3d_04.jpg
+  - alt: banner 4
+    id: '4'
+    src: /img/banner_aw3d_04.jpg
 wrapperTestimonials:
   testimonials:
     - author: IT4D
