@@ -13,7 +13,7 @@ banners:
     id: 3
     src: /img/banner3.jpg
   - alt: banner 4
-    id: '4'
+    id: 4
     src: /img/banner_aw3d_04.jpg
 wrapperTestimonials:
   testimonials:
@@ -75,7 +75,7 @@ miniPortfolio:
       title: Nossa Senhora Achiropita
       url: /portfolio/nossa-senhora-achiropita/
     - alt: Bralyx
-      id: '4'
+      id: 4
       src: /img/banner_aw3d_04.jpg
       title: Miniatura de Máquina para Salgados e Doces
       url: /portfolio/bralyx-maquina/
