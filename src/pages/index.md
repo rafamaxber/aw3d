@@ -11,6 +11,9 @@ banners:
     src: /img/banner3.jpg
   - alt: banner 4
     src: /img/banner_aw3d_04.jpg
+  - alt: teste banner
+    src: /img/impressc3a3o-3d.jpg
+  - {}
 wrapperTestimonials:
   testimonials:
     - author: IT4D
