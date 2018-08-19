@@ -85,7 +85,6 @@ export const pageQuery = graphql`
       frontmatter {
         images {
           alt
-          id
           src
           width
           height
