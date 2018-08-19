@@ -9,5 +9,13 @@ images:
     height: '5'
     src: /img/aw3d_chillibeans_caveira-1.jpg
     width: '5'
+  - alt: teste
+    height: '5'
+    src: /img/GTMax3D.jpg
+    width: '5'
+  - alt: teste
+    height: '5'
+    src: /img/aw3d_chillibeans_caveira-3.jpg
+    width: '5'
 ---
 bralyx-maquina
