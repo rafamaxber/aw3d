@@ -17,7 +17,7 @@ banners:
     src: /img/banner_aw3d_04.jpg
   - alt: banner 8
     id: '5'
-    src: /img/banner_8.jpg
+    src: /img/banner3.jpg
 wrapperTestimonials:
   testimonials:
     - author: IT4D
