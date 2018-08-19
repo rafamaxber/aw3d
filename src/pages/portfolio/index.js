@@ -100,7 +100,6 @@ export const portfolioPageQuery = graphql`
               title
               description
               images {
-                id
                 alt
                 width
                 height

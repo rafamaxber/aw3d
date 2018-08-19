@@ -102,8 +102,8 @@ const Component = ({ images }) => {
 
   return (
     <Slider {...settings} className="bannerSlider">
-      {images.map(item => (
-        <div className="bannerImage" key={item.id}>
+      {images.map((item, index) => (
+        <div className="bannerImage" key={`${item.src}_${index}`}>
           <img className="bannerImage--img" src={item.src} alt={item.alt} />
         </div>
       ))}
@@ -113,7 +113,6 @@ const Component = ({ images }) => {
 
 Component.propTypes = {
   images: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
     src: PropTypes.string,
     alt: PropTypes.string,
   })).isRequired,

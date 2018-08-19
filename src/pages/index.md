@@ -4,16 +4,12 @@ templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: banner 1
-    id: 1
     src: /img/banner1.jpg
   - alt: banner 2
-    id: 2
     src: /img/banner2.jpg
   - alt: banner 3
-    id: 3
     src: /img/banner3.jpg
   - alt: banner 4
-    id: 4
     src: /img/banner_aw3d_04.jpg
 wrapperTestimonials:
   testimonials:
@@ -60,22 +56,18 @@ wrapperTestimonials:
 miniPortfolio:
   images:
     - alt: Chillibeans Caveira
-      id: 1
       src: /img/thumb1.jpg
       title: Chillibeans Caveira
       url: /portfolio/chillibeans-trofeu-caveira/
     - alt: Chillibeans Pimenta
-      id: 2
       src: /img/thumb2.jpg
       title: Chillibeans Pimenta
       url: /portfolio/chillibeans-pimenta/
     - alt: Nossa Senhora Achiropita
-      id: 3
       src: /img/thumb3.jpg
       title: Nossa Senhora Achiropita
       url: /portfolio/nossa-senhora-achiropita/
     - alt: Bralyx
-      id: 4
       src: /img/banner_aw3d_04.jpg
       title: Miniatura de Máquina para Salgados e Doces
       url: /portfolio/bralyx-maquina/

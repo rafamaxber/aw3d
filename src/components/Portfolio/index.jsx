@@ -56,7 +56,7 @@ const ComponentMiniPortfolio = ({ title, images }) => (
     <Container>
       <MiniPortfolio>
         {images.map(image => (
-          <WrapperLink key={image.id} to={image.url}>
+          <WrapperLink key={image.url} to={image.url}>
             <CardImage>
               <Image src={image.src} alt={image.alt} />
             </CardImage>

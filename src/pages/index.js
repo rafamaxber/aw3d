@@ -111,14 +111,12 @@ export const IndexPageQuery = graphql`
             welcomeTitle
             banners {
               alt
-              id
               src
             }
             miniPortfolio {
               title
               images {
                 alt
-                id
                 url
                 src
                 title
