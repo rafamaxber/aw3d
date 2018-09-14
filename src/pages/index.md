@@ -4,7 +4,7 @@ templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: banner 1
-    src: /img/banner1.jpg
+    src: /img/banner_aw3d_01.jpg
   - alt: banner 2
     src: /img/banner2.jpg
   - alt: banner 3
