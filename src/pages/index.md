@@ -9,8 +9,8 @@ banners:
     src: /img/banner2.jpg
   - alt: banner 3
     src: /img/banner3.jpg
-  - alt: banner 4
-    src: /img/banner_aw3d_04.jpg
+  - alt: banner DUE
+    src: /img/banner-due.jpg
 wrapperTestimonials:
   testimonials:
     - author: IT4D
