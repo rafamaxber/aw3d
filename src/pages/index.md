@@ -67,10 +67,6 @@ miniPortfolio:
       src: /img/thumb3.jpg
       title: Nossa Senhora Achiropita
       url: /portfolio/nossa-senhora-achiropita/
-    - alt: Bralyx
-      src: /img/banner_aw3d_04.jpg
-      title: Miniatura de Máquina para Salgados e Doces
-      url: /portfolio/bralyx-maquina/
   title: O que andamos fazendo
 ---
 É com muito prazer que a AW3D lhe apresenta o mundo<br/>
