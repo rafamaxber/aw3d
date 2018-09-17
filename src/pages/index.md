@@ -9,7 +9,7 @@ banners:
     src: /img/banner2.jpg
   - alt: banner 3
     src: /img/banner3.jpg
-  - alt: banner DUE
+  - alt: Banner Due
     src: /img/banner-due.jpg
 wrapperTestimonials:
   testimonials:
