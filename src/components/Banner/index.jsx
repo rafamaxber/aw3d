@@ -12,7 +12,7 @@ injectGlobal`
   .bannerSlider {
     max-width: 1400px;
     margin: 20px auto 0;
-    @media (max-width: 768px) {
+    @media (max-width: 815px) {
       margin-top: 0px;
     }
     .bannerImage--img {

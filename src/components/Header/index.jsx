@@ -44,10 +44,14 @@ const Header = styled.header`
   border-bottom: 2px solid #f3f3f3;
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     height: 50px;
-    background-color: #f8d322;
+    background-color: #fff;
     border-bottom: none;
+  }
+
+  @media (max-width: 335px) {
+    height: 45px;
   }
 `;
 
@@ -56,7 +60,7 @@ const WrapperNavigation = styled(Container)`
   display: flex;
   position: relative;
   justify-content: space-between;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     padding: 0 0 0 0;
     justify-content: space-between;
   }
@@ -67,7 +71,7 @@ const Nav = styled.nav`
   &.active {
     display: block !important;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     width: 100%;
     position: fixed;
     top: 0;
@@ -88,7 +92,7 @@ const Menu = styled.ul`
   justify-content: space-between;
   max-width: 480px;
   float: right;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     max-width: 100%;
     display: block;
   }
@@ -96,7 +100,7 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   list-style: none;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     padding: 15px 0;
   }
 `;
@@ -110,7 +114,7 @@ const MenuLinkItem = styled(Link)`
   :hover {
     color: #949494;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     font-size: 2.5em;
   }
 `;
@@ -118,13 +122,13 @@ const MenuLinkItem = styled(Link)`
 const LinkComum = MenuLinkItem.withComponent('a');
 const LinkStoreMobile = styled(LinkComum)`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     display: block;
   }
 `;
 
 const HamburguerMenuBar = styled.div`
-  background-color: #fff;
+  background-color: #f8d322;
   height: 3px;
   width: 25px;
   border-radius: 5px;
@@ -138,7 +142,7 @@ const HamburguerMenu = styled.div`
   display: none;
   z-index: 2;
   padding: 0 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     display: block;
   }
   &.active > div {
@@ -153,7 +157,7 @@ const IconBtn = styled.a`
   :hover {
     color: #949494;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     display: none;
   }
 `;
@@ -165,7 +169,7 @@ const WrapperSocialMobile = styled.div`
 
 const HeaderBtn = styled(Btn)`
   margin: 0 25px;
-  @media (max-width: 768px) {
+  @media (max-width: 815px) {
     display: none;
   }
 `;

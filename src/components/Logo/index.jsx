@@ -1,27 +1,43 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import logo from '../../img/logo_aw3d_bg.svg';
+import logo from '../../img/logo-revenda.svg';
 
 const styleLogo = `
-  width: 130px;
+  width: 100%;
   margin: 0 0 0 0;
-  background-color: #f8d322;
-  height: 70px;
   padding: 0 0 0 0;
   display: flex;
   align-items: center;
   a {
     display: block;
+    width: 62%;
+    min-width: 200px;
+    height: 70px;
   }
-  @media (max-width: 768px) {
-   height: 49px;
+  @media (max-width: 1200px) {
+    width: 70%;
+    a {
+      width: 100%;
+    }
+  }
+  @media (max-width: 930px) {
+    width: 60%;
+  }
+  @media (max-width: 870px) {
+    width: 50%;
+  }
+  @media (max-width: 815px) {
+    width: 80%;
+    a {
+      height: auto;
+      max-width: 262px;
+    }
   }
 `;
 
 const Logo = styled.div`
-  ${styleLogo} 
-  @media (max-width: 768px) {
+  ${styleLogo} @media (max-width: 768px) {
     width: 110px;
   }
 `;
@@ -33,7 +49,16 @@ const LogoH1 = styled.h1`
 const LogoImage = styled.img`
   display: block;
   margin: auto;
-  width: 80%;
+  width: 100%;
+  max-height: 70px;
+  @media (max-width: 815px) {
+    width: 280px;
+    height: 50px;
+  }
+  @media (max-width: 335px) {
+    width: 100%;
+    height: 45px;
+  }
 `;
 
 const LogoLink = () => (
