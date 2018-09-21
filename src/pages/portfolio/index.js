@@ -7,15 +7,10 @@ import Content, { HTMLContent } from '../../components/Content';
 import { Container, Title } from '../../components/Shared';
 
 const Wrapper = styled.div`
-  font-size: 1.6em;
+  
 `;
-
-const TitlePost = Title.extend`
-  text-align: left;
-  padding-bottom: 0;
-  h2 {
-    font-size: 1.3em;
-  }
+const WrapperText = styled.div`
+  font-size: 1.8em;
 `;
 
 const Gallery = styled(Link)`
@@ -63,10 +58,12 @@ const PortfolioPage = ({ data: { allMarkdownRemark: { group } } }) => (
         photos = item.frontmatter.images;
         return (
           <div key={item.fields.slug}>
-            <TitlePost>
-              <h2>{item.frontmatter.title}</h2>
-            </TitlePost>
-            <HTMLContent content={item.html} />
+            <Title>
+              <h1>{item.frontmatter.title}</h1>
+            </Title>
+            <WrapperText>
+              <HTMLContent content={item.html} />
+            </WrapperText>
             <Gallery to={item.fields.slug}>
               <BigImage>
                 <Image src={photos[0].src} alt={photos[0].alt} />

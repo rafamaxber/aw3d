@@ -12,7 +12,6 @@ const Wrapper = styled.div`
 `;
 
 const TitlePost = Title.extend`
-  text-align: left;
   padding-bottom: 0;
 `;
 
