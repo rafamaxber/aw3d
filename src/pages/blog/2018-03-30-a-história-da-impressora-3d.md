@@ -2,8 +2,8 @@
 templateKey: blog-post
 title: A História da Impressora 3D
 date: 2018-02-27T20:16:09.135Z
-full_image: '/img/impressc3a3o-3d.jpg'
 description: A História da Impressora 3D
+full_image: /img/impressc3a3o-3d.jpg
 tags:
   - GTMax3D
 ---
