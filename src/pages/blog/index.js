@@ -9,15 +9,16 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 const WrapperPost = styled.div`
-  width: 32%;
-  margin-bottom: 3%;
+  width: 30%;
+  margin: 0 1.5% 3%;
   background-color: #fff;
   box-shadow: 0 0 10px -3px #929292;
   @media (max-width: 768px) {
-    width: 48%;
+    width: 47%;
   }
   @media (max-width: 480px) {
     width: 100%;
