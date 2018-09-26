@@ -5,16 +5,16 @@ welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: banner 1
     src: /img/banner_aw3d_01.jpg
-    link: #
+    link: ''
   - alt: banner 2
     src: /img/banner2.jpg
-    link: #
+    link: ''
   - alt: banner 3
     src: /img/banner3.jpg
-    link: #
+    link: ''
   - alt: banner DUE
     src: /img/banner-due.jpg
-    link: #
+    link: ''
 wrapperTestimonials:
   testimonials:
     - author: IT4D
