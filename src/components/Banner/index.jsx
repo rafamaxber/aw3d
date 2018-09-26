@@ -70,6 +70,10 @@ const PrevArrow = styled.div`
   transform: rotate(180deg);
 `;
 
+const BannerLink = styled.a`
+  display: block;
+`;
+
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -102,9 +106,18 @@ const Component = ({ images }) => {
 
   return (
     <Slider {...settings} className="bannerSlider">
-      {images.map((item, index) => (
-        <div className="bannerImage" key={`${item.src}_${index}`}>
-          <img className="bannerImage--img" src={item.src} alt={item.alt} />
+      {images.map(item => (
+        <div className="bannerImage" key={`${item.src}_${new Date()}`}>
+          {
+            item.link
+            ?
+              <BannerLink href={item.link}>
+                <img className="bannerImage--img" src={item.src} alt={item.alt} />
+              </BannerLink>
+            :
+              <img className="bannerImage--img" src={item.src} alt={item.alt} />
+
+          }
         </div>
       ))}
     </Slider>
@@ -115,6 +128,7 @@ Component.propTypes = {
   images: PropTypes.arrayOf(PropTypes.shape({
     src: PropTypes.string,
     alt: PropTypes.string,
+    link: PropTypes.string,
   })).isRequired,
 };
 

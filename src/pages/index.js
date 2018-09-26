@@ -112,6 +112,7 @@ export const IndexPageQuery = graphql`
             banners {
               alt
               src
+              link
             }
             miniPortfolio {
               title
