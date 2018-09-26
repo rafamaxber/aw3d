@@ -4,17 +4,17 @@ templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: banner 1
+    link: ''
     src: /img/banner_aw3d_01.jpg
-    link: ''
   - alt: banner 2
+    link: ''
     src: /img/banner2.jpg
-    link: ''
   - alt: banner 3
+    link: ''
     src: /img/banner3.jpg
-    link: ''
   - alt: banner DUE
+    link: 'https://mailchi.mp/7a5061ca523a/aw3d_due'
     src: /img/banner-due.jpg
-    link: ''
 wrapperTestimonials:
   testimonials:
     - author: IT4D
