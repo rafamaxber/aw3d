@@ -111,7 +111,7 @@ const Component = ({ images }) => {
           {
             item.link
             ?
-              <BannerLink href={item.link}>
+              <BannerLink href={item.link} target="_blank">
                 <img className="bannerImage--img" src={item.src} alt={item.alt} />
               </BannerLink>
             :
