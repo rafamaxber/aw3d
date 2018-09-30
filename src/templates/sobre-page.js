@@ -7,8 +7,8 @@ import { Container, Title } from '../components/Shared';
 
 const Wrapper = styled.div`
   font-size: 1.8em;
-  max-width: 700px;
-  text-align: justify;
+  max-width: 1000px;
+  text-align: center;
   margin: 0 auto 80px;
   .content a {
     text-decoration: underline;

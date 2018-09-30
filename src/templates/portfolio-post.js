@@ -8,7 +8,7 @@ import Gallery from '../components/PortfolioLightbox';
 
 const Wrapper = styled.div`
   font-size: 1.6em;
-  max-width: 700px;
+  text-align: center;
 `;
 
 const TitlePost = Title.extend`

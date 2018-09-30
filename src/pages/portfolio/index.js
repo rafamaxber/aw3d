@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 `;
 const WrapperText = styled.div`
   font-size: 1.8em;
+  text-align: center;
 `;
 
 const Gallery = styled(Link)`
