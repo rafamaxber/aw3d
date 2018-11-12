@@ -15,6 +15,7 @@ banners:
   - alt: banner DUE
     link: 'https://mailchi.mp/7a5061ca523a/aw3d_due'
     src: /img/banner-due.jpg
+  - src: /img/aw3d_25hora.jpg
 wrapperTestimonials:
   testimonials:
     - author: IT4D
