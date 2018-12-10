@@ -97,9 +97,6 @@ const Component = () => (
         <LinkCustom itemprop="telephone" href="tel:11975442029">
           (11) 97544-2029
         </LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:11974662955">
-          (11) 97466-2955
-        </LinkCustom>
       </Column>
 
       <Column>
