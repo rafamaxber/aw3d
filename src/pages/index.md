@@ -3,9 +3,6 @@ title: Bem vindo a AW3D sua melhor impressão
 templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
-  - alt: banner 1
-    link: ''
-    src: /img/banner_aw3d_01.jpg
   - alt: banner 2
     link: ''
     src: /img/banner2.jpg
