@@ -13,7 +13,6 @@ banners:
     link: 'https://mailchi.mp/7a5061ca523a/aw3d_due'
     src: /img/banner-due.jpg
   - src: /img/banner_aw3d_01.jpg
-  - {}
 wrapperTestimonials:
   testimonials:
     - author: IT4D
