@@ -3,10 +3,6 @@ title: Bem vindo a AW3D sua melhor impressão
 templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
-  - alt: banner DUE
-    link: 'https://mailchi.mp/7a5061ca523a/aw3d_due'
-    src: /img/banner-due.jpg
-  - src: /img/banner_aw3d_01.jpg
   - src: /img/aw3d_mudou-1-.jpg
 wrapperTestimonials:
   testimonials:
