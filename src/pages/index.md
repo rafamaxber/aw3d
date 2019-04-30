@@ -4,6 +4,7 @@ templateKey: index
 welcomeTitle: Bem vindo a AW3D
 banners:
   - alt: mudança
+    link: '#'
     src: /img/aw3d_mudou-1-.jpg
 wrapperTestimonials:
   testimonials:
