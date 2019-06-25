@@ -2,7 +2,14 @@
 title: Bem vindo a AW3D sua melhor impressão
 templateKey: index
 welcomeTitle: Bem vindo a AW3D
-banners: []
+banners:
+  - alt: GTMax3D
+    link: 'https://www.aw3dshop.com.br/impressoras-3d'
+    src: /img/banner_aw3d_01.jpg
+  - alt: DUE NXT
+    src: /img/banner-due.jpg
+  - src: /img/banner_aw3d_02.jpg
+  - src: /img/banner_aw3d_03.jpg
 wrapperTestimonials:
   testimonials:
     - author: IT4D
