@@ -2,8 +2,7 @@
 title: Bem vindo a AW3D sua melhor impressão
 templateKey: index
 welcomeTitle: Bem vindo a AW3D
-banners:
-  - {}
+banners: []
 wrapperTestimonials:
   testimonials:
     - author: IT4D
