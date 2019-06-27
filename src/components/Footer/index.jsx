@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { Container } from '../Shared';
 import Newsletter from '../Newsletter';
-import Selo from '../../img/selo_150px.jpg';
 import { menuLinks } from '../Header';
 
 const Footer = styled.footer`
@@ -13,6 +12,8 @@ const Footer = styled.footer`
 
 const Wrapper = styled(Container)`
   display: flex;
+  width: 1200px;
+  margin: auto;
   justify-content: space-between;
   align-content: center;
   padding-top: 40px;
@@ -37,7 +38,7 @@ const ItemLink = styled(Link)`
 
 const Column = styled.div`
   font-size: 1.6em;
-  width: 25%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   @media (max-width: 600px) {
@@ -64,10 +65,6 @@ const Copyright = styled.div`
   padding: 7px;
 `;
 
-const Image = styled.img`
-  width: 140px;
-`;
-
 const date = new Date();
 const year = date.getFullYear();
 
@@ -75,9 +72,6 @@ const Component = () => (
   <Footer>
     <Newsletter />
     <Wrapper>
-      <Column>
-        <Image src={Selo} alt="AW3D GTMax3D Revenda autorizada São Paulo" />
-      </Column>
 
       <Column>
         {[...menuLinks].reverse().map(item => (
@@ -91,19 +85,21 @@ const Component = () => (
         <LinkCustom href="mailto:vendas@aw3d.com.br" title="Entre em contato por e-mail">
           vendas@aw3d.com.br
         </LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:1131053633">
-          (11) 3105-3633
+        <LinkCustom itemprop="telephone" href="tel:83991456548">
+          (83) 99145-6548
         </LinkCustom>
-        <LinkCustom itemprop="telephone" href="tel:11975442029">
-          (11) 97544-2029
+        <LinkCustom itemprop="telephone" href="tel:8335761190">
+          (83) 3576-1190
         </LinkCustom>
       </Column>
 
       <Column>
         Conheça nosso Showroom
         <Address>
-          Rua Roberto Simonsen 120 Sala 304<br />
-          Centro de São Paulo <br />
+          Av. Pres. Epitácio Pessoa, 4.940 – Sala 207<br />
+
+          Cabo Branco – João Pessoa/PB <br />
+
           Ligue e agende uma visita!
         </Address>
       </Column>

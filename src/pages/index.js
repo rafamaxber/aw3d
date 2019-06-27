@@ -23,17 +23,17 @@ const jsonSchema = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+55 (11) 3105-3633',
+      telephone: '+55 (83) 3576-1190',
       contactType: 'customer service',
       areaServed: 'BR',
     },
     {
       '@type': 'PostalAddress',
       addressCountry: 'Brasil',
-      addressRegion: 'Sâo Paulo',
-      addressLocality: 'Sé',
-      postalCode: '01017-020',
-      streetAddress: 'Rua Roberto Simonsen 120 Sala 304',
+      addressRegion: 'Paraiba',
+      addressLocality: 'Cabo Branco – João Pessoa',
+      postalCode: '58045-000',
+      streetAddress: 'Av. Pres. Epitácio Pessoa, 4.940 – Sala 207',
     },
   ],
 };

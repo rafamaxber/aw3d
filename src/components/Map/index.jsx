@@ -6,7 +6,7 @@ import styled from "styled-components";
 const MarkComponent = styled.address`
   background-color: rgba(255, 255, 255, 0.9);
   color: #000;
-  width: 230px;
+  width: 260px;
   padding: 20px;
   display: block;
   border: 2px solid #ffcc30;
@@ -16,8 +16,9 @@ const MarkComponent = styled.address`
 const Mark = () => (
   <MarkComponent>
     <b>Conheça nosso Showroom</b>
-    <p>Rua Roberto Simonsen 120 Sala 304 Centro – São Paulo</p>
-    <p>Ligue e agende uma visita! <u>3105.3633</u></p>
+    <p>Av. Pres. Epitácio Pessoa, 4.940 – Sala 207</p>
+    <p>Cabo Branco – João Pessoa/PB</p>
+    <p>Ligue e agende uma visita! <u>(83) 99145-6548</u></p>
   </MarkComponent>
 );
 
@@ -29,7 +30,7 @@ const GoogleMapContainer = styled.div`
 export default class Map extends PureComponent {
 
   static defaultProps = {
-    center: { lat: -23.541785, lng: -46.632293 },
+    center: { lat: -7.119307, lng: -34.826649 },
     zoom: 15,
   };
 
@@ -41,8 +42,8 @@ export default class Map extends PureComponent {
           defaultCenter={ this.props.center }
           defaultZoom={ this.props.zoom }>
           <Mark
-            lat={ -23.541785 }
-            lng={ -46.632293 }
+            lat={ -7.119307 }
+            lng={ -34.826649 }
           />
         </GoogleMapReact>
       </GoogleMapContainer>
