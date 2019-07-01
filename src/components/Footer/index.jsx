@@ -21,6 +21,8 @@ const Wrapper = styled(Container)`
   @media (max-width: 600px) {
     flex-direction: column-reverse;
     text-align: center;
+    max-width: 1200px;
+    width: 100%;
   }
 `;
 
